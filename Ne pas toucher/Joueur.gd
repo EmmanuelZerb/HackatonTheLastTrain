@@ -16,11 +16,14 @@ var time_bob = 0.0
 # FOV variables
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
+const RECUL_COUP = 1.0
+
 
 var gravity = 9.8
 
 @onready var tête = $"Tête"
 @onready var camera = $"Tête/Camera3D"
+@onready var rect_dégât = $"Interface_Joueur/rect_dégât"
 
 func _init():
 	g_vars.joueur = self
@@ -80,3 +83,12 @@ func _headbob(time) -> Vector3:
 	pos.y = sin(time * BOB_FREQ) * BOB_AMPLITUDE
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMPLITUDE
 	return pos
+
+func coup(dir):
+	effets_dégâts()
+	velocity += dir * RECUL_COUP
+
+func effets_dégâts():
+	rect_dégât.visible = true
+	await get_tree().create_timer(0.2).timeout
+	rect_dégât.visible = false

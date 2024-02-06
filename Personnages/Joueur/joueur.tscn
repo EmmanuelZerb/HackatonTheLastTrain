@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkqhg178vmupd"]
+[gd_scene load_steps=4 format=3 uid="uid://bkqhg178vmupd"]
 
 [ext_resource type="Script" path="res://Ne pas toucher/Joueur.gd" id="1_scwxf"]
-[ext_resource type="Texture2D" uid="uid://tknw35l3av28" path="res://Graphismes/Decals/blob_ombre.png" id="2_jlfby"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7imn6"]
 
@@ -21,13 +20,25 @@ shape = SubResource("CapsuleShape3D_gp5ss")
 
 [node name="Camera3D" type="Camera3D" parent="Tête"]
 
-[node name="Decal" type="Decal" parent="Tête/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -0.5)
-visible = false
-texture_albedo = ExtResource("2_jlfby")
-
 [node name="Armes" type="Node3D" parent="."]
 
 [node name="Corps à corps" type="Node3D" parent="Armes"]
 
 [node name="Distance" type="Node3D" parent="Armes"]
+
+[node name="Interface_Joueur" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="Interface_Joueur"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="rect_dégât" type="ColorRect" parent="Interface_Joueur"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.505882, 0.466667, 0.482353)
