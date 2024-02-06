@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkqhg178vmupd"]
+
+[ext_resource type="Script" path="res://Ne pas toucher/Joueur.gd" id="1_scwxf"]
+[ext_resource type="Texture2D" uid="uid://tknw35l3av28" path="res://Graphismes/Decals/blob_ombre.png" id="2_jlfby"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7imn6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gp5ss"]
+
+[node name="Joueur" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("1_scwxf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_7imn6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_gp5ss")
+
+[node name="Tête" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Tête"]
+
+[node name="Decal" type="Decal" parent="Tête/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -0.5)
+visible = false
+texture_albedo = ExtResource("2_jlfby")
+
+[node name="Armes" type="Node3D" parent="."]
+
+[node name="Corps à corps" type="Node3D" parent="Armes"]
+
+[node name="Distance" type="Node3D" parent="Armes"]
