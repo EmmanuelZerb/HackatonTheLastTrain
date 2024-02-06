@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/image="res://Ne pas toucher/Godot Blocks screen.png"
 config/icon="res://Ne pas toucher/Godot Blocks logo.png"
 
+[autoload]
+
+g_vars="*res://Ne pas toucher/Scripts/g_vars.gd"
+
 [file_customization]
 
 folder_colors={

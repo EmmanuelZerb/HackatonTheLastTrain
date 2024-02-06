@@ -22,6 +22,9 @@ var gravity = 9.8
 @onready var tête = $"Tête"
 @onready var camera = $"Tête/Camera3D"
 
+func _init():
+	g_vars.joueur = self
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
