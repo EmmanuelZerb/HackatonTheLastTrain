@@ -27,6 +27,10 @@ folder_colors={
 "res://Ne pas toucher/Graphismes/": "red"
 }
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 Avancer={
