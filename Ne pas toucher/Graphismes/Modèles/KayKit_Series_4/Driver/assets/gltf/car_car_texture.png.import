@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://g4o0m5f7sitf"
-path="res://.godot/imported/car_car_texture.png-abdd82d0a3cdcf80551ce557047dda4b.ctex"
+path.s3tc="res://.godot/imported/car_car_texture.png-abdd82d0a3cdcf80551ce557047dda4b.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://Ne pas toucher/Graphismes/Modèles/KayKit_Series_4/Driver/assets/gltf/car_car_texture.png"
-dest_files=["res://.godot/imported/car_car_texture.png-abdd82d0a3cdcf80551ce557047dda4b.ctex"]
+dest_files=["res://.godot/imported/car_car_texture.png-abdd82d0a3cdcf80551ce557047dda4b.s3tc.ctex"]
 
 [params]
 
