@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bkqhg178vmupd" path="res://Personnages/Joueur/joueur.tscn" id="1_3tr8t"]
 [ext_resource type="PackedScene" uid="uid://cji7sslmby0bg" path="res://Ne pas toucher/Graphismes/Modèles/Environment Sets/KayKit_HalloweenBits_1.0_FREE/fence.gltf" id="1_n7wdt"]
-[ext_resource type="PackedScene" uid="uid://ctsgxe13ne84g" path="res://Ne pas toucher/objet_base.tscn" id="2_f2tri"]
+[ext_resource type="PackedScene" uid="uid://ctsgxe13ne84g" path="res://Nodes/objet_base.tscn" id="2_f2tri"]
 [ext_resource type="PackedScene" uid="uid://c73inar6buts0" path="res://Ne pas toucher/Personnages/Ennemis/corps_skeleton_minion.tscn" id="3_0na5t"]
 [ext_resource type="PackedScene" uid="uid://b1mg0x5iqmb8g" path="res://Ne pas toucher/principale_test.tscn" id="4_c5d1c"]
 [ext_resource type="Script" path="res://Ne pas toucher/Corps_Objets.gd" id="4_kl4k7"]

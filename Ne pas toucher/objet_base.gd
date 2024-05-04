@@ -45,7 +45,6 @@ func a_la_mort():
 		if(déclencher_a_la_mort3.has_method("déclencheur")):
 			déclencher_a_la_mort3.déclencheur()
 	if FX_mort != null:
-		print("FX_mort PAS NULL")
 		FX_mort.jouer_son_et_fx()
 
 func joueur_touche(): # ajouter damage

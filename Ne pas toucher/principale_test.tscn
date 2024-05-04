@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b1mg0x5iqmb8g"]
 
 [ext_resource type="PackedScene" uid="uid://bkqhg178vmupd" path="res://Personnages/Joueur/joueur.tscn" id="1_sgsjg"]
-[ext_resource type="PackedScene" uid="uid://ctsgxe13ne84g" path="res://Ne pas toucher/objet_base.tscn" id="2_ayfk7"]
+[ext_resource type="PackedScene" uid="uid://ctsgxe13ne84g" path="res://Nodes/objet_base.tscn" id="2_ayfk7"]
 [ext_resource type="PackedScene" uid="uid://c73inar6buts0" path="res://Ne pas toucher/Personnages/Ennemis/corps_skeleton_minion.tscn" id="4_efmox"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5k7af"]
