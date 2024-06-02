@@ -1,10 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqpl6odm2wn5o"]
+[gd_scene load_steps=2 format=3 uid="uid://d06s5i4srbdic"]
 
-[ext_resource type="FontFile" uid="uid://dabn8wophmbd7" path="res://Graphismes/Polices/lilita_one_regular.ttf" id="1_5t4io"]
-[ext_resource type="Script" path="res://Ne pas toucher/Scripts/Menu_Restart.gd" id="1_kbw3u"]
-[ext_resource type="PackedScene" uid="uid://deqfgx87jrhyw" path="res://Ne pas toucher/secondary_test.tscn" id="2_vsnrv"]
+[ext_resource type="Script" path="res://Ne pas toucher/Scripts/Menu_Restart.gd" id="1_0nqxm"]
 
-[node name="Control" type="Control"]
+[node name="Menu_Victoire" type="Control"]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -12,35 +10,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_kbw3u")
-"Scène_A_Lancer" = ExtResource("2_vsnrv")
+script = ExtResource("1_0nqxm")
+"Scène_A_Lancer" = "res://Scènes/Votre_Scene_A_Dupliquer.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.396078, 0.396078, 0.396078, 0.533333)
+offset_left = 496.0
+offset_top = 251.0
+offset_right = 590.0
+offset_bottom = 291.0
+color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 336.0
-offset_top = 120.0
-offset_right = 820.0
-offset_bottom = 235.0
-theme_override_fonts/font = ExtResource("1_5t4io")
-theme_override_font_sizes/font_size = 100
-text = "VICTOIRE !"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 511.0
+offset_top = 260.0
+offset_right = 579.0
+offset_bottom = 283.0
+text = "Victoire !"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 472.0
-offset_top = 264.0
-offset_right = 680.0
-offset_bottom = 328.0
-theme_override_fonts/font = ExtResource("1_5t4io")
-theme_override_font_sizes/font_size = 30
-text = "Restart"
+offset_top = 322.0
+offset_right = 614.0
+offset_bottom = 372.0
+text = "Continue"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

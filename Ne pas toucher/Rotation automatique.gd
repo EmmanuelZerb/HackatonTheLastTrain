@@ -10,11 +10,19 @@ enum RotationAxis {
 
 func _ready():
 	if get_parent() is objet_base:
-		var tween := create_tween().set_loops()
-		match Axe_De_Rotation:
-			RotationAxis.X_AXIS:
-				tween.tween_property(get_parent(), "rotation", get_parent().rotation + Vector3(PI * 2, 0, 0), Temps_De_Rotation).set_trans(Tween.TRANS_LINEAR)
-			RotationAxis.Y_AXIS:
-				tween.tween_property(get_parent(), "rotation", get_parent().rotation + Vector3(0, PI * 2, 0), Temps_De_Rotation).set_trans(Tween.TRANS_LINEAR)
-			RotationAxis.Z_AXIS:
-				tween.tween_property(get_parent(), "rotation", get_parent().rotation + Vector3(0, 0, PI * 2), Temps_De_Rotation).set_trans(Tween.TRANS_LINEAR)
+		rotation_objet()
+
+func rotation_objet():
+	var tween := create_tween()
+	tween.set_loops(1)
+	tween.connect("finished", Callable(self, "_on_tween_completed"))
+	match Axe_De_Rotation:
+		RotationAxis.X_AXIS:
+			tween.tween_property(get_parent(), "rotation", get_parent().rotation + Vector3(PI * 2, 0, 0), Temps_De_Rotation).set_trans(Tween.TRANS_LINEAR)
+		RotationAxis.Y_AXIS:
+			tween.tween_property(get_parent(), "rotation", get_parent().rotation + Vector3(0, PI * 2, 0), Temps_De_Rotation).set_trans(Tween.TRANS_LINEAR)
+		RotationAxis.Z_AXIS:
+			tween.tween_property(get_parent(), "rotation", get_parent().rotation + Vector3(0, 0, PI * 2), Temps_De_Rotation).set_trans(Tween.TRANS_LINEAR)
+
+func _on_tween_completed():
+	rotation_objet()
