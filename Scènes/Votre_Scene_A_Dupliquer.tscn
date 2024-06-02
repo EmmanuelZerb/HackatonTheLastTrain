@@ -108,10 +108,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="Porte" parent="." instance=ExtResource("2_rc2y7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.351645, -3.80785)
-visible = false
-"Déclencheur" = 3
+"Déclencheur" = 4
 "Son_Joué_Par_Déclencheur" = SubResource("AudioStreamWAV_4ewnw")
 Menu_Victoire = "res://Graphismes/Interfaces/menu_victoire.tscn"
+"Menu_Défaite" = "res://Graphismes/Interfaces/menu_defaite.tscn"
 
 [node name="Corps" type="RigidBody3D" parent="Porte"]
 freeze = true
@@ -122,7 +122,7 @@ freeze = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.263836, 0, 0)
 
 [node name="Clé 2" parent="." node_paths=PackedStringArray("déclencher_a_la_mort1") instance=ExtResource("2_rc2y7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.607307, 0.0158597, -2.90661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.607307, 0.0158597, 3.22749)
 "déclencher_a_la_mort1" = NodePath("../Porte")
 max_vie = 1
 "Son_Joué_Par_Déclencheur" = ExtResource("9_dptuk")

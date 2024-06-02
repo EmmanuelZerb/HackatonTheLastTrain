@@ -86,8 +86,10 @@ func déclencheur():
 				get_tree().paused = true
 		Liste_Déclencheurs.Défaite:
 			if Menu_Défaite != "":
-				%Menus.add_child(Menu_Défaite_Scene.instantiate())
-				%Menu_Défaite.show()
+				var Menu_Defaite_Temporaire = Menu_Défaite_Scene.instantiate()
+				Menu_Defaite_Temporaire.name = "Menu_Defaite"
+				%Menus.add_child(Menu_Defaite_Temporaire)
+				%Menus/Menu_Defaite.show()
 				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 				print("Défaite !")
 				get_tree().paused = true
