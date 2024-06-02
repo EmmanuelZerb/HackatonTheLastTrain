@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://inpye7cn3qpl"]
+[gd_scene load_steps=52 format=3 uid="uid://inpye7cn3qpl"]
 
 [ext_resource type="PackedScene" uid="uid://v0yp25t8arpw" path="res://Graphismes/Objets 3D/Environment Sets/City_Builder_Bits/building_A.gltf" id="1_8gce1"]
 [ext_resource type="PackedScene" uid="uid://bkqhg178vmupd" path="res://Personnages/Joueur/joueur.tscn" id="1_clbht"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://dqlpy1gmn5jd1" path="res://Graphismes/Objets 3D/Environment Sets/HalloweenBits/tree_pine_yellow_small.gltf" id="36_opb5g"]
 [ext_resource type="PackedScene" uid="uid://bhnbsvp8tw5rp" path="res://Graphismes/Objets 3D/Environment Sets/Medieval Builder Pack 1.0/objects/house.gltf.glb" id="37_s8xc6"]
 [ext_resource type="AudioStream" uid="uid://hnn2ikdqhoak" path="res://Ne pas toucher/Sons/AMBIANCE/AMBIANCE_LOOP_WINDY.wav" id="38_tlgad"]
+[ext_resource type="PackedScene" uid="uid://bigna1liwja26" path="res://Graphismes/Objets 3D/Environment Sets/City_Builder_Bits/streetlight.gltf" id="39_qvamj"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5k7af"]
 agent_max_slope = 60.0
@@ -54,7 +55,6 @@ sky = SubResource("Sky_7iupd")
 ambient_light_source = 2
 ambient_light_color = Color(1, 0.972549, 0.988235, 1)
 ssao_enabled = true
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.2109
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_osxtb"]
@@ -85,7 +85,7 @@ stereo = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_365sl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_30rr1"]
-size = Vector3(198, 1, 129.57)
+size = Vector3(198, 1, 151.271)
 
 [node name="Principale_test" type="Node3D"]
 
@@ -434,6 +434,240 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 31.952, 2, -7.09468)
 [node name="house_gltf" parent="Map" instance=ExtResource("37_s8xc6")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 100.57, 2, 4.34537)
 
+[node name="streetlight2" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-15, 0, 2.26494e-06, 0, 15, 0, -2.26494e-06, 0, -15, -10.4807, 1.5, 2.69378)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight2"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight3" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(15, 0, -4.52995e-06, 0, 15, 0, 4.52995e-06, 0, 15, 11.5193, 1.5, 2.69378)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight3"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight4" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-15, 0, 2.26494e-06, 0, 15, 0, -2.26494e-06, 0, -15, -10.4807, 1.5, -36.3062)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight4"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight5" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(15, 0, -4.52995e-06, 0, 15, 0, 4.52995e-06, 0, 15, 11.5193, 1.5, -36.3062)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight5"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight6" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-15, 0, 2.26494e-06, 0, 15, 0, -2.26494e-06, 0, -15, -10.4807, 1.5, 31.6938)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight6"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight22" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-15, 0, 2.26494e-06, 0, 15, 0, -2.26494e-06, 0, -15, 49.5193, 1.5, 5.69378)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight22"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight23" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(15, 0, -4.52995e-06, 0, 15, 0, 4.52995e-06, 0, 15, 71.5193, 1.5, 5.69378)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight23"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight24" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-15, 0, 2.26494e-06, 0, 15, 0, -2.26494e-06, 0, -15, 49.5193, 1.5, -33.3062)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight24"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight25" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(15, 0, -4.52995e-06, 0, 15, 0, 4.52995e-06, 0, 15, 71.5193, 1.5, -33.3062)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight25"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight26" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-15, 0, 2.26494e-06, 0, 15, 0, -2.26494e-06, 0, -15, 49.5193, 1.5, 32.6938)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight26"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight27" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(15, 0, -9.53595e-07, 0, 15, 0, 9.53595e-07, 0, 15, 71.5193, 1.5, 32.6938)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight27"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight7" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(15, 0, -4.52995e-06, 0, 15, 0, 4.52995e-06, 0, 15, 11.5193, 1.5, 31.6938)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight7"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight8" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-15, 0, 2.26494e-06, 0, 15, 0, -2.26494e-06, 0, -15, 109.519, 1.5, 2.69378)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight8"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight9" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(15, 0, -4.52995e-06, 0, 15, 0, 4.52995e-06, 0, 15, 131.519, 1.5, 2.69378)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight9"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight10" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-15, 0, 2.26494e-06, 0, 15, 0, -2.26494e-06, 0, -15, 109.519, 1.5, -36.3062)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight10"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight11" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(15, 0, -4.52995e-06, 0, 15, 0, 4.52995e-06, 0, 15, 131.519, 1.5, -36.3062)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight11"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight12" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-15, 0, 2.26494e-06, 0, 15, 0, -2.26494e-06, 0, -15, 109.519, 1.5, 31.6938)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight12"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight13" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(15, 0, -4.52995e-06, 0, 15, 0, 4.52995e-06, 0, 15, 131.519, 1.5, 31.6938)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight13"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight14" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(2.92061e-06, 0, 15, 0, 15, 0, -15, 0, 2.92061e-06, 88.5193, 1.5, 34.6938)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight14"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight15" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-5.18562e-06, 0, -15, 0, 15, 0, 15, 0, -5.18562e-06, 88.5193, 1.5, 56.6938)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight15"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight16" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(2.92061e-06, 0, 15, 0, 15, 0, -15, 0, 2.92061e-06, 27.5193, 1.5, 34.6938)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight16"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight17" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-5.18562e-06, 0, -15, 0, 15, 0, 15, 0, -5.18562e-06, 27.5193, 1.5, 56.6938)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight17"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight18" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(2.92061e-06, 0, 15, 0, 15, 0, -15, 0, 2.92061e-06, 86.5193, 1.5, -65.3062)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight18"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight19" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-5.18562e-06, 0, -15, 0, 15, 0, 15, 0, -5.18562e-06, 86.5193, 1.5, -43.3062)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight19"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight20" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(2.92061e-06, 0, 15, 0, 15, 0, -15, 0, 2.92061e-06, 25.5193, 1.5, -65.3062)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight20"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
+[node name="streetlight21" parent="Map" instance=ExtResource("39_qvamj")]
+transform = Transform3D(-5.18562e-06, 0, -15, 0, 15, 0, 15, 0, -5.18562e-06, 25.5193, 1.5, -43.3062)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/streetlight21"]
+transform = Transform3D(0.0666667, -1.00664e-08, -1.00664e-08, 1.00664e-08, -2.91409e-09, 0.0666667, -1.00664e-08, -0.0666667, -2.91409e-09, -0.2, 0.933333, 2.98023e-08)
+light_color = Color(1, 1, 0.317647, 1)
+light_energy = 16.0
+spot_range = 34.225
+
 [node name="Joueur" parent="." instance=ExtResource("1_clbht")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -10)
 
@@ -534,14 +768,43 @@ Spatialiser = true
 
 [node name="Pause" type="Node3D" parent="Music_Manager/Soundtrack5"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="GroundFloor_Collider" type="StaticBody3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, -5.88493)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundFloor_Collider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, -1.37903)
 shape = SubResource("BoxShape3D_30rr1")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="NorthBuilding_Collider" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -67.092)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NorthBuilding_Collider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, -1.37903)
+shape = SubResource("BoxShape3D_30rr1")
+
+[node name="SouthBuilding_Collider2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 59.0802)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SouthBuilding_Collider2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, -1.37903)
+shape = SubResource("BoxShape3D_30rr1")
+
+[node name="EastBuilding_Collider3" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -12.6591, 0, 6.90717)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EastBuilding_Collider3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, -1.37903)
+shape = SubResource("BoxShape3D_30rr1")
+
+[node name="WestBuilding_Collider4" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 133.464, 0, 6.90717)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WestBuilding_Collider4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, -1.37903)
+shape = SubResource("BoxShape3D_30rr1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("38_tlgad")
+volume_db = -20.048
 autoplay = true
 
 [connection signal="body_entered" from="Clé 2/Corps" to="Clé 2/Corps" method="_Quand_Collision"]
