@@ -12,13 +12,14 @@ config_version=5
 
 config/name="Godot_Blocks"
 run/main_scene="res://Scènes/Votre_Scene_A_Dupliquer.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 boot_splash/image="res://Ne pas toucher/Godot Blocks screen.png"
 config/icon="res://Ne pas toucher/Godot Blocks logo.png"
 
 [autoload]
 
 g_vars="*res://Ne pas toucher/Scripts/g_vars.gd"
+ArduinoManager="*res://Arduino_Manager/Arduino_Manager.cs"
 
 [dotnet]
 

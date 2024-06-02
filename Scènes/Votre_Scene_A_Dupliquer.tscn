@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://cs7ogpv0ace55"]
+[gd_scene load_steps=24 format=3 uid="uid://cs7ogpv0ace55"]
 
 [ext_resource type="PackedScene" uid="uid://bkqhg178vmupd" path="res://Personnages/Joueur/joueur.tscn" id="1_qrlu4"]
 [ext_resource type="PackedScene" uid="uid://ctsgxe13ne84g" path="res://Nodes/objet_base.tscn" id="2_rc2y7"]
 [ext_resource type="PackedScene" uid="uid://dkps44cl5i0i2" path="res://Nodes/corps.tscn" id="3_amau2"]
 [ext_resource type="PackedScene" uid="uid://n8bbppxr6bhp" path="res://Nodes/dégât_au_contact_du_joueur.tscn" id="4_i5l5x"]
+[ext_resource type="Script" path="res://Rotation_US.gd" id="4_u7fwg"]
 [ext_resource type="PackedScene" uid="uid://cvnhqii8iteaf" path="res://Nodes/fx_mort.tscn" id="5_oernt"]
 [ext_resource type="PackedScene" uid="uid://pn0oopvxq3vn" path="res://Nodes/rotation_automatique.tscn" id="6_hdusr"]
 [ext_resource type="AudioStream" uid="uid://xxjs0u6gw76x" path="res://Ne pas toucher/Sons/Monster9_Death10.wav" id="7_i6fkq"]
@@ -120,6 +121,9 @@ freeze = true
 
 [node name="Door_A2" parent="Porte/Corps" instance=ExtResource("7_rvy2h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.263836, 0, 0)
+
+[node name="Rotation_UltraSon" type="Node3D" parent="Porte"]
+script = ExtResource("4_u7fwg")
 
 [node name="Clé 2" parent="." node_paths=PackedStringArray("déclencher_a_la_mort1") instance=ExtResource("2_rc2y7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.607307, 0.0158597, 3.22749)

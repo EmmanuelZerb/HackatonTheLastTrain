@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.IO.Ports;
 
-public partial class ArduinoManager : Node2D
+public partial class Arduino_Manager : Node2D
 {
 	SerialPort serialPort;
 	
@@ -42,6 +42,8 @@ public partial class ArduinoManager : Node2D
 	}
 
 	public override void _Process(double delta){
+		//GD.Print("boutonTrois");
+		//GD.Print(boutonTrois);
 		if(serialPort.IsOpen){
 			messageSerie = serialPort.ReadLine();
 			//if(messageSerie !=""){
@@ -60,15 +62,15 @@ public partial class ArduinoManager : Node2D
 			foreach (var valeur in tableauValeurs)					//Affichage des valeurs dans la console pour debugger
 			{
 				if(valeur != "Debut" && valeur != "Fin"){
-					GD.Print($"<{valeur}>");
+					//GD.Print($"<{valeur}>");
 				}
 			}
-			potentiometreUn = Int32.Parse(tableauValeurs[1]);
-			potentiometreDeux = Int32.Parse(tableauValeurs[2]);
+			ultrasonUn = Int32.Parse(tableauValeurs[1]);
+			boutonTrois = Int32.Parse(tableauValeurs[2]);
 			potentiometreTrois = Int32.Parse(tableauValeurs[3]);
 			boutonUn = Int32.Parse(tableauValeurs[4]);
 			boutonDeux = Int32.Parse(tableauValeurs[5]);
-			boutonTrois = Int32.Parse(tableauValeurs[6]);
+			// boutonTrois = Int32.Parse(tableauValeurs[6]);
 			piezzoUn = Int32.Parse(tableauValeurs[7]);
 			piezzoDeux = Int32.Parse(tableauValeurs[8]);
 			piezzoTrois = Int32.Parse(tableauValeurs[9]);
@@ -90,7 +92,7 @@ public partial class ArduinoManager : Node2D
 		serialPort = new SerialPort();
 		serialPort.DtrEnable = true;
 		serialPort.RtsEnable = true;
-		serialPort.PortName = "COM4"; //Vous devez vérifier sur l'IDE arduino le bon port COM et l'écrire à la main.
+		serialPort.PortName = "COM6"; //Vous devez vérifier sur l'IDE arduino le bon port COM et l'écrire à la main.
 		serialPort.BaudRate = 115200; //Vous devez choisir un baudrate et celui-ci doit être le même dans Arduino.
 		serialPort.Open();
 		if(serialPort != null && serialPort.IsOpen){
