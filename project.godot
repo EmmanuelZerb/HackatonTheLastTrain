@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Godot_Blocks"
-run/main_scene="res://Scènes/Votre_Scene_A_Dupliquer.tscn"
+run/main_scene="res://Scènes/Demo_Prof.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 boot_splash/image="res://Ne pas toucher/Godot Blocks screen.png"
 config/icon="res://Ne pas toucher/Godot Blocks logo.png"

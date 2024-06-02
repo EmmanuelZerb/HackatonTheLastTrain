@@ -2,17 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://bkqhg178vmupd" path="res://Personnages/Joueur/joueur.tscn" id="1_x5se0"]
 [ext_resource type="PackedScene" uid="uid://ctsgxe13ne84g" path="res://Nodes/objet_base.tscn" id="2_5igw8"]
-[ext_resource type="PackedScene" uid="uid://di6nenog517xc" path="res://Ne pas toucher/Graphismes/Modèles/Environment Sets/KayKit_Prototype_Bits_1.0_FREE/Door_A.gltf" id="3_hayx6"]
+[ext_resource type="PackedScene" uid="uid://di6nenog517xc" path="res://Graphismes/Objets 3D/Environment Sets/KayKit_Prototype_Bits_1.0_FREE/Door_A.gltf" id="3_hayx6"]
 [ext_resource type="AudioStream" uid="uid://cseidah8i8hxn" path="res://Ne pas toucher/Sons/Key19.wav" id="4_qe0uq"]
 [ext_resource type="PackedScene" uid="uid://dkps44cl5i0i2" path="res://Nodes/corps.tscn" id="5_gukxv"]
-[ext_resource type="PackedScene" uid="uid://cmkaj06h115mx" path="res://Ne pas toucher/Graphismes/Modèles/Environment Sets/KayKit_DungeonRemastered_1.0_EXTRA/key.gltf.glb" id="6_nkkl4"]
+[ext_resource type="PackedScene" uid="uid://cmkaj06h115mx" path="res://Graphismes/Objets 3D/Environment Sets/KayKit_DungeonRemastered_1.0_EXTRA/key.gltf.glb" id="6_nkkl4"]
 [ext_resource type="PackedScene" uid="uid://n8bbppxr6bhp" path="res://Nodes/dégât_au_contact_du_joueur.tscn" id="7_hwwar"]
 [ext_resource type="PackedScene" uid="uid://cvnhqii8iteaf" path="res://Nodes/fx_mort.tscn" id="8_426rd"]
 [ext_resource type="AudioStream" uid="uid://xxjs0u6gw76x" path="res://Ne pas toucher/Sons/Monster9_Death10.wav" id="9_k0vf5"]
 [ext_resource type="PackedScene" uid="uid://pn0oopvxq3vn" path="res://Nodes/rotation_automatique.tscn" id="10_7cyn1"]
 [ext_resource type="Script" path="res://Ne pas toucher/General_Manager.gd" id="11_fq11y"]
 [ext_resource type="Script" path="res://Nodes/Soundtrack.gd" id="12_21hfa"]
-[ext_resource type="PackedScene" uid="uid://joql612x8isj" path="res://Ne pas toucher/Graphismes/Modèles/Environment Sets/KayKit_DungeonRemastered_1.0_EXTRA/chest.glb" id="13_a6e1w"]
+[ext_resource type="PackedScene" uid="uid://joql612x8isj" path="res://Graphismes/Objets 3D/Environment Sets/KayKit_DungeonRemastered_1.0_EXTRA/chest.glb" id="13_a6e1w"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5k7af"]
 vertices = PackedVector3Array(-1, 1, -5.75, 1, 1, -6, 1, 1, -6.75, -3, 1, -5, -2.75, 1, -3.75, -0.75, 1, -3.75, -1, 1, -5.75, -6.75, 1, 0, -6, 1, 0, -6, 1, -4.75, -6.75, 1, -7, -3, 1, -5, -1, 1, -5.75, 1, 1, -6.75, -6.75, 1, -7, -6, 1, -4.75, -5.75, 1, 1.25, -6, 1, 0, -6.75, 1, 0, -6.75, 1, 7, 1, 1, -6.75, 1, 1, -6, 2.25, 1, -5.75, 7, 1, -6.75, -2.75, 1, 0.75, -3.25, 1, 1.25, -6.75, 1, 7, -0.75, 1, -3.75, -2.75, 1, -3.75, -2.75, 1, 0.75, 7, 1, -6.75, 2.25, 1, -5.75, 2.25, 1, -4.25, -2.75, 1, 0.75, -6.75, 1, 7, 7, 1, 7, 7, 1, -6.75, 1.75, 1, -3.75, 7, 1, -6.75, 2.25, 1, -4.25, 1.75, 1, -3.75, 1.75, 1, -3.75, -0.75, 1, -3.75, -2.75, 1, 0.75, -3.25, 1, 1.25, -5.75, 1, 1.25, -6.75, 1, 7, -5, 4, -4, -5, 4, 0.25, -3.75, 4, 0.25, -3.75, 4, -4, -4.75, 1, -3.75, -4.75, 1, 0, -4, 1, 0, -4, 1, -3.75)
