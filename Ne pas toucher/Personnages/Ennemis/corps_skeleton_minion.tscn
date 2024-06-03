@@ -1,8 +1,8 @@
 [gd_scene load_steps=119 format=3 uid="uid://c73inar6buts0"]
 
-[ext_resource type="Texture2D" uid="uid://i77058qcjny0" path="res://Graphismes/Objets 3D/KayKit_Skeletons_1.0_EXTRA/characters/Skeleton_Minion_skeleton_texture_A.png" id="1_8c2k3"]
+[ext_resource type="Texture2D" uid="uid://i77058qcjny0" path="res://Graphismes/Objets 3D/Characters/Skeletons_Pack/characters/Skeleton_Minion_skeleton_texture_A.png" id="1_8c2k3"]
 [ext_resource type="Script" path="res://Ne pas toucher/Personnages/Ennemis/corps_ennemi.gd" id="1_d8lia"]
-[ext_resource type="PackedScene" uid="uid://ceqj8b5sgj80p" path="res://Graphismes/Objets 3D/KayKit_Skeletons_1.0_EXTRA/assets/Skeleton_Axe.gltf" id="3_5xhkk"]
+[ext_resource type="PackedScene" uid="uid://ceqj8b5sgj80p" path="res://Graphismes/Objets 3D/Characters/Skeletons_Pack/assets/Skeleton_Axe.gltf" id="3_5xhkk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgcc8"]
 resource_name = "skeleton"

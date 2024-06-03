@@ -37,18 +37,14 @@ public partial class Arduino_Manager : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		simpleInit();							//Initialisation simple qui prend en compte le port COM définit à la main
-		//initializeSerialCommunication();      //Début de solution pour trouver le port COM automatiquement
+		simpleInit();							// Initialisation simple qui prend en compte le port COM définit à la main
 	}
 
 	public override void _Process(double delta){
-		//GD.Print("boutonTrois");
-		//GD.Print(boutonTrois);
+
 		if(serialPort.IsOpen){
 			messageSerie = serialPort.ReadLine();
-			//if(messageSerie !=""){
-				//GD.Print("Message reçu de la Arduino : " + messageSerie);	
-			//}
+
 			string[] tableauValeurs = messageSerie.Split(':');
 			
 			//Attention, si le tableau a moins de valeurs que ce qu'on essaye de lire, il y aura une erreur.
@@ -61,22 +57,10 @@ public partial class Arduino_Manager : Node2D
 			
 			foreach (var valeur in tableauValeurs)					//Affichage des valeurs dans la console pour debugger
 			{
-				if(valeur != "Debut" && valeur != "Fin"){
-					//GD.Print($"<{valeur}>");
-				}
+				//GD.Print($"<{valeur}>");
 			}
-			ultrasonUn = Int32.Parse(tableauValeurs[1]);
-			boutonTrois = Int32.Parse(tableauValeurs[2]);
-			potentiometreTrois = Int32.Parse(tableauValeurs[3]);
-			boutonUn = Int32.Parse(tableauValeurs[4]);
-			boutonDeux = Int32.Parse(tableauValeurs[5]);
-			// boutonTrois = Int32.Parse(tableauValeurs[6]);
-			piezzoUn = Int32.Parse(tableauValeurs[7]);
-			piezzoDeux = Int32.Parse(tableauValeurs[8]);
-			piezzoTrois = Int32.Parse(tableauValeurs[9]);
-			ultrasonUn = Int32.Parse(tableauValeurs[10]);
-			ultrasonDeux = Int32.Parse(tableauValeurs[11]);
-			ultrasonTrois = Int32.Parse(tableauValeurs[12]);
+			ultrasonUn = Int32.Parse(tableauValeurs[0]);
+			potentiometreUn = Int32.Parse(tableauValeurs[1]);
 			
 			currentTime = Time.GetTicksMsec();
 			
@@ -92,7 +76,7 @@ public partial class Arduino_Manager : Node2D
 		serialPort = new SerialPort();
 		serialPort.DtrEnable = true;
 		serialPort.RtsEnable = true;
-		serialPort.PortName = "COM6"; //Vous devez vérifier sur l'IDE arduino le bon port COM et l'écrire à la main.
+		serialPort.PortName = "COM3"; //Vous devez vérifier sur l'IDE arduino le bon port COM et l'écrire à la main.
 		serialPort.BaudRate = 115200; //Vous devez choisir un baudrate et celui-ci doit être le même dans Arduino.
 		serialPort.Open();
 		if(serialPort != null && serialPort.IsOpen){
@@ -105,7 +89,7 @@ public partial class Arduino_Manager : Node2D
 		
 		foreach (var port in ports)
 			{
-					GD.Print($"<{port}>");
+				GD.Print($"<{port}>");
 			}
 			
 		serialPort = new SerialPort();
@@ -134,7 +118,7 @@ public partial class Arduino_Manager : Node2D
 			{
 				// Écrire le caractère sur le port série
 				serialPort.Write(character.ToString());
-				GD.Print("Caractère envoyé : " + character);
+				//GD.Print("Caractère envoyé : " + character);
 			}
 			else
 			{
