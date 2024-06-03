@@ -22,7 +22,6 @@ func _ready():
 	AudioPlayers = [AudioPlayer1, AudioPlayer2, AudioPlayer3]
 
 func Arduino_Mouvement():
-	print(ArduinoManager.potentiometreUn)
 	target_altitude = float(ArduinoManager.ultrasonUn) / 3
 	target_rotation = deg_to_rad(ArduinoManager.potentiometreUn / 1.5)
 
