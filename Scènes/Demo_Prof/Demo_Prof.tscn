@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://inpye7cn3qpl"]
+[gd_scene load_steps=50 format=3 uid="uid://inpye7cn3qpl"]
 
 [ext_resource type="PackedScene" uid="uid://v0yp25t8arpw" path="res://Graphismes/Objets 3D/Environment Sets/City_Builder_Bits/building_A.gltf" id="1_8gce1"]
 [ext_resource type="PackedScene" uid="uid://cb8ksx0y5h4nw" path="res://Graphismes/Objets 3D/Environment Sets/City_Builder_Bits/building_B.gltf" id="2_6e8jb"]
@@ -74,6 +74,9 @@ size = Vector3(40, 1, 20)
 [sub_resource type="BoxMesh" id="BoxMesh_s6x5d"]
 material = SubResource("StandardMaterial3D_h4w4d")
 size = Vector3(40, 1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gf0fo"]
+size = Vector3(198, 66, 151.271)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_30rr1"]
 size = Vector3(198, 1, 151.271)
@@ -657,8 +660,8 @@ transform = Transform3D(-15, 0, 2.26494e-06, 0, 15, 0, -2.26494e-06, 0, -15, -10
 transform = Transform3D(-0.0666667, 0, -1.00664e-08, 0, 0.0666667, 0, 1.00664e-08, 0, -0.0666667, -0.698713, -0.0333333, 0.179585)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Colliders/GroundFloor_Collider"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, -1.37903)
-shape = SubResource("BoxShape3D_30rr1")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -32, -1.379)
+shape = SubResource("BoxShape3D_gf0fo")
 
 [node name="NorthBuilding_Collider" type="StaticBody3D" parent="Map/Colliders"]
 transform = Transform3D(-0.0666666, -1.00664e-08, 4.40016e-16, 0, -2.91409e-09, -0.0666666, 1.00664e-08, -0.0666666, 2.91409e-09, -0.698713, 3.41979, 4.65239)
@@ -688,11 +691,46 @@ transform = Transform3D(-7.1523e-09, 0.0666666, -2.91409e-09, 0, -2.91409e-09, -
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, -1.37903)
 shape = SubResource("BoxShape3D_30rr1")
 
+[node name="candle2" parent="Map" instance=ExtResource("43_in7us")]
+transform = Transform3D(0.992992, -0.118179, 0, 0.117661, 0.988643, -0.0935002, 0.0110497, 0.0928449, 0.995619, 97.2687, 2.05578, 8.29438)
+
+[node name="candle_melted2" parent="Map" instance=ExtResource("44_iatvv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102, 2.05379, 9)
+
+[node name="candle_melted3" parent="Map" instance=ExtResource("44_iatvv")]
+transform = Transform3D(0.997854, 0.0654728, 0, -0.0654728, 0.997854, 0, 0, 0, 1, 99.7862, 2.0015, 10.0639)
+
+[node name="candle_melted4" parent="Map" instance=ExtResource("44_iatvv")]
+transform = Transform3D(1, 0, 0, 0, 0.994697, 0.102845, 0, -0.102845, 0.994697, 99.8862, 2.0874, 7.46393)
+
+[node name="candle_melted6" parent="Map" instance=ExtResource("44_iatvv")]
+transform = Transform3D(1, 0, 0, 0, 0.994697, 0.102845, 0, -0.102845, 0.994697, 101.963, 2.01447, 7.31485)
+
+[node name="candle_melted7" parent="Map" instance=ExtResource("44_iatvv")]
+transform = Transform3D(1, 0, 0, 0, 0.994697, 0.102845, 0, -0.102845, 0.994697, 102.785, 1.95461, 9.97688)
+
+[node name="candle_melted8" parent="Map" instance=ExtResource("44_iatvv")]
+transform = Transform3D(1, 0, 0, 0, 0.994697, 0.102845, 0, -0.102845, 0.994697, 98.6383, 1.91903, 10.6714)
+
+[node name="candle_melted5" parent="Map" instance=ExtResource("44_iatvv")]
+transform = Transform3D(1, 0, 0, 0, 0.97719, -0.212365, 0, 0.212365, 0.97719, 101.749, 1.9724, 11.3291)
+
+[node name="gravestone2" parent="Map" instance=ExtResource("45_a6d6w")]
+transform = Transform3D(-0.963947, 0, -0.266095, 0, 1, 0, 0.266095, 0, -0.963947, 100.522, 2, 12.7034)
+
 [node name="General_Manager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("12_c5r33")
 
 [node name="Menus" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Arduino_indicator" type="Label" parent="Menus"]
+offset_right = 63.0
+offset_bottom = 27.0
+text = "Arduino mode on"
+
+[node name="ArduinoModeTimer" type="Timer" parent="Menus/Arduino_indicator"]
 unique_name_in_owner = true
 
 [node name="Music_Manager" type="Node" parent="."]
@@ -778,7 +816,7 @@ Prochain_Objet_A_Activer = NodePath("../Object_To_Catch_2")
 
 [node name="Object_To_Catch_2" parent="." node_paths=PackedStringArray("Prochain_Objet_A_Activer") instance=ExtResource("42_eoydl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 14, 45)
-Prochain_Objet_A_Activer = NodePath("../Object_To_Catch_3")
+Prochain_Objet_A_Activer = NodePath("../Object_To_Catch_5")
 
 [node name="Object_To_Catch_3" parent="." node_paths=PackedStringArray("Prochain_Objet_A_Activer") instance=ExtResource("42_eoydl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.8974, 5.07785, -11.6205)
@@ -791,33 +829,6 @@ Prochain_Objet_A_Activer = NodePath("../Object_To_Catch_5")
 [node name="Object_To_Catch_5" parent="." instance=ExtResource("42_eoydl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.023, 2.14908, 10.3294)
 final_object = true
-
-[node name="candle2" parent="." instance=ExtResource("43_in7us")]
-transform = Transform3D(0.992992, -0.118179, 0, 0.117661, 0.988643, -0.0935002, 0.0110497, 0.0928449, 0.995619, 97.2687, 1.05578, 8.29438)
-
-[node name="candle_melted2" parent="." instance=ExtResource("44_iatvv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102, 1.05379, 9)
-
-[node name="candle_melted3" parent="." instance=ExtResource("44_iatvv")]
-transform = Transform3D(0.997854, 0.0654728, 0, -0.0654728, 0.997854, 0, 0, 0, 1, 99.7862, 1.0015, 10.0639)
-
-[node name="candle_melted4" parent="." instance=ExtResource("44_iatvv")]
-transform = Transform3D(1, 0, 0, 0, 0.994697, 0.102845, 0, -0.102845, 0.994697, 99.8862, 1.0874, 7.46393)
-
-[node name="candle_melted6" parent="." instance=ExtResource("44_iatvv")]
-transform = Transform3D(1, 0, 0, 0, 0.994697, 0.102845, 0, -0.102845, 0.994697, 101.963, 1.01447, 7.31485)
-
-[node name="candle_melted7" parent="." instance=ExtResource("44_iatvv")]
-transform = Transform3D(1, 0, 0, 0, 0.994697, 0.102845, 0, -0.102845, 0.994697, 102.785, 0.954606, 9.97688)
-
-[node name="candle_melted8" parent="." instance=ExtResource("44_iatvv")]
-transform = Transform3D(1, 0, 0, 0, 0.994697, 0.102845, 0, -0.102845, 0.994697, 98.6383, 0.91903, 10.6714)
-
-[node name="candle_melted5" parent="." instance=ExtResource("44_iatvv")]
-transform = Transform3D(1, 0, 0, 0, 0.97719, -0.212365, 0, 0.212365, 0.97719, 101.749, 0.972402, 11.3291)
-
-[node name="gravestone2" parent="." instance=ExtResource("45_a6d6w")]
-transform = Transform3D(-0.963947, 0, -0.266095, 0, 1, 0, 0.266095, 0, -0.963947, 100.522, 1, 12.7034)
 
 [node name="Final_Camera" type="Camera3D" parent="."]
 unique_name_in_owner = true
