@@ -73,43 +73,25 @@ public partial class Arduino_Manager : Node2D
 	}
 
 	void simpleInit(){
-		serialPort = new SerialPort();
-		serialPort.DtrEnable = true;
-		serialPort.RtsEnable = true;
-		serialPort.PortName = "COM6"; //Vous devez vérifier sur l'IDE arduino le bon port COM et l'écrire à la main.
-		serialPort.BaudRate = 9600; //Vous devez choisir un baudrate et celui-ci doit être le même dans Arduino.
-		serialPort.Open();
-		if(serialPort != null && serialPort.IsOpen){
-			GD.Print($"La connection avec le port {serialPort.PortName} est ouverte");
-			startTime = Time.GetTicksMsec();
-		}
-	}
-	void initializeSerialCommunication(){
-		string[] ports = SerialPort.GetPortNames();
-		
-		foreach (var port in ports)
+		try
+		{
+			serialPort = new SerialPort("COM5", 9600) // ⚠️ Vérifier le bon port COM ici
 			{
-				GD.Print($"<{port}>");
-			}
-			
-		serialPort = new SerialPort();
-		serialPort.DtrEnable = true;
-		serialPort.RtsEnable = true;
-		serialPort.ReadTimeout = 100;
-		serialPort.WriteTimeout = 100;
-		serialPort.BaudRate = 9600; //make sure this is the same in Arduino as it is in Godot.
-		
-		for(int i = 0; i < ports.Length; i++){
-			serialPort.PortName = ports[i];
-			GD.Print("Testing Port " + ports[i]);	
+				ReadTimeout = 500,  // Temps d'attente avant qu'une lecture échoue
+				Handshake = Handshake.None, // Désactiver le contrôle de flux
+				DtrEnable = true,  // Active Data Terminal Ready pour éviter le reset automatique de l'Arduino
+				RtsEnable = true   // Active Request to Send
+			};
 			serialPort.Open();
-			if(serialPort.IsOpen){
-				messageSerie = serialPort.ReadLine();
-				GD.Print(messageSerie);
-				GD.Print("this is the one");
-			}
+			GD.Print("Port série ouvert avec succès !");
+		}
+		catch (Exception e)
+		{
+			GD.PrintErr($"Erreur d'ouverture du port : {e.Message}");
+			serialPort = null;
 		}
 	}
+	
 	public void SendCharacter(char character){
 		try
 		{
