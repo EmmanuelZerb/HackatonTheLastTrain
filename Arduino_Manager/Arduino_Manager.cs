@@ -76,8 +76,8 @@ public partial class Arduino_Manager : Node2D
 		serialPort = new SerialPort();
 		serialPort.DtrEnable = true;
 		serialPort.RtsEnable = true;
-		serialPort.PortName = "COM4"; //Vous devez vérifier sur l'IDE arduino le bon port COM et l'écrire à la main.
-		serialPort.BaudRate = 115200; //Vous devez choisir un baudrate et celui-ci doit être le même dans Arduino.
+		serialPort.PortName = "COM6"; //Vous devez vérifier sur l'IDE arduino le bon port COM et l'écrire à la main.
+		serialPort.BaudRate = 9600; //Vous devez choisir un baudrate et celui-ci doit être le même dans Arduino.
 		serialPort.Open();
 		if(serialPort != null && serialPort.IsOpen){
 			GD.Print($"La connection avec le port {serialPort.PortName} est ouverte");
@@ -97,7 +97,7 @@ public partial class Arduino_Manager : Node2D
 		serialPort.RtsEnable = true;
 		serialPort.ReadTimeout = 100;
 		serialPort.WriteTimeout = 100;
-		serialPort.BaudRate = 115200; //make sure this is the same in Arduino as it is in Godot.
+		serialPort.BaudRate = 9600; //make sure this is the same in Arduino as it is in Godot.
 		
 		for(int i = 0; i < ports.Length; i++){
 			serialPort.PortName = ports[i];
