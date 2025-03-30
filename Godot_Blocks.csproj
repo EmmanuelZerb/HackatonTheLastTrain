@@ -5,6 +5,6 @@
     <RootNamespace>C_Test</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.IO.ports" Version="7.0.0" />
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
   </ItemGroup>
 </Project>

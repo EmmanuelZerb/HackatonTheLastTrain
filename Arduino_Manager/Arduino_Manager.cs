@@ -76,7 +76,7 @@ public partial class Arduino_Manager : Node2D
 		serialPort = new SerialPort();
 		serialPort.DtrEnable = true;
 		serialPort.RtsEnable = true;
-		serialPort.PortName = "COM3"; //Vous devez vérifier sur l'IDE arduino le bon port COM et l'écrire à la main.
+		serialPort.PortName = "COM4"; //Vous devez vérifier sur l'IDE arduino le bon port COM et l'écrire à la main.
 		serialPort.BaudRate = 115200; //Vous devez choisir un baudrate et celui-ci doit être le même dans Arduino.
 		serialPort.Open();
 		if(serialPort != null && serialPort.IsOpen){
@@ -135,5 +135,3 @@ public partial class Arduino_Manager : Node2D
 		SendCharacter(toggled_on ? '1':'0');
 	}
 }
-
-
