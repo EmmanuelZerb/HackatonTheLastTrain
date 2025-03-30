@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cvnhqii8iteaf" path="res://Nodes/fx_mort.tscn" id="8_426rd"]
 [ext_resource type="AudioStream" uid="uid://xxjs0u6gw76x" path="res://Ne pas toucher/Sons/Monster9_Death10.wav" id="9_k0vf5"]
 [ext_resource type="PackedScene" uid="uid://pn0oopvxq3vn" path="res://Nodes/rotation_automatique.tscn" id="10_7cyn1"]
-[ext_resource type="Script" path="res://Ne pas toucher/General_Manager.gd" id="11_fq11y"]
-[ext_resource type="Script" path="res://Nodes/Soundtrack.gd" id="12_21hfa"]
+[ext_resource type="Script" uid="uid://u8rveu0varkj" path="res://Ne pas toucher/General_Manager.gd" id="11_fq11y"]
+[ext_resource type="Script" uid="uid://dvh6v84mxw10y" path="res://Nodes/Soundtrack.gd" id="12_21hfa"]
 [ext_resource type="PackedScene" uid="uid://joql612x8isj" path="res://Graphismes/Objets 3D/Environment Sets/DungeonRemastered/chest.glb" id="13_a6e1w"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5k7af"]

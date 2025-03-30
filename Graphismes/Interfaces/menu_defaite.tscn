@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dtuwjlwmjsfh1"]
 
-[ext_resource type="Script" path="res://Ne pas toucher/Scripts/Menu_Restart.gd" id="1_g5rxr"]
+[ext_resource type="Script" uid="uid://dshjwbb7ahtpc" path="res://Ne pas toucher/Scripts/Menu_Restart.gd" id="1_g5rxr"]
 
 [node name="Menu_Victoire" type="Control"]
 process_mode = 3
