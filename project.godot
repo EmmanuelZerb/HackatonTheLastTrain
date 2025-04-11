@@ -8,6 +8,24 @@
 
 config_version=5
 
+[Fmod]
+
+General/auto_initialize=true
+General/channel_count=1024
+General/is_live_update_enabled=true
+General/is_memory_tracking_enabled=false
+"Software Format/sample_rate"=48000
+"Software Format/speaker_mode"=3
+"Software Format/raw_speaker_count"=0
+General/default_listener_count=1
+General/banks_path="res://Sons & musiques/Fichiers FMOD/FmodBank/Desktop"
+General/should_load_by_name=false
+DSP/dsp_buffer_size=512
+DSP/dsp_buffer_count=4
+"3D Settings/doppler_scale"=1.0
+"3D Settings/distance_factor"=1.0
+"3D Settings/rolloff_scale"=1.0
+
 [application]
 
 config/name="Godot_Blocks"
@@ -20,10 +38,15 @@ config/icon="res://Ne pas toucher/Godot Blocks logo.png"
 
 g_vars="*res://Ne pas toucher/Scripts/g_vars.gd"
 ArduinoManager="*res://Arduino_Manager/Arduino_Manager.cs"
+FmodManager="*res://addons/fmod/FmodManager.gd"
 
 [dotnet]
 
 project/assembly_name="Godot_Blocks"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/fmod/plugin.cfg")
 
 [file_customization]
 

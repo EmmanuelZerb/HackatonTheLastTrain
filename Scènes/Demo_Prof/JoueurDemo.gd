@@ -20,6 +20,8 @@ const ALTITUDE_CHANGE_SPEED = 0.12
 
 var AudioPlayers = []
 
+var compteur_object_collecte = 0
+
 func _ready():
 	randomize()
 	AudioPlayers = [AudioPlayer1, AudioPlayer2, AudioPlayer3]
@@ -27,13 +29,26 @@ func _ready():
 	%ArduinoModeTimer.timeout.connect(_on_ArduinoModeTimer_timeout)
 	%ArduinoModeTimer.start(2.0)
 
+	$FmodEventEmitter3D_ambiance.set_parameter("AmbianceChange", "None")
+	$FmodEventEmitter3D_ambiance.play()
+
 func Arduino_Mouvement():
 	target_altitude = float(ArduinoManager.ultrasonUn) / 3
 	target_rotation = deg_to_rad(ArduinoManager.potentiometreUn / 1.5)
 
 func Play_Feedback_Sound():
-	var random_index = randi() % AudioPlayers.size()
-	AudioPlayers[random_index].play()
+	# ancienne méthode :
+	#var random_index = randi() % AudioPlayers.size()
+	#AudioPlayers[random_index].play()
+	# nouvelle méthode :
+	$FmodEventEmitter3D_reward.play()
+	compteur_object_collecte = compteur_object_collecte + 1
+	if (compteur_object_collecte == 1):
+		$FmodEventEmitter3D_ambiance.set_parameter("AmbianceChange", "State1")
+	elif (compteur_object_collecte == 2):
+		$FmodEventEmitter3D_ambiance.set_parameter("AmbianceChange", "State2")
+	elif (compteur_object_collecte == 3):
+		$FmodEventEmitter3D_ambiance.set_parameter("AmbianceChange", "State3")
 
 
 func _physics_process(delta):

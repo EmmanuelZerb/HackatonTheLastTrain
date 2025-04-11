@@ -809,6 +809,25 @@ stream = ExtResource("40_ntitv")
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="JoueurDemo"]
 stream = ExtResource("41_5wbt6")
 
+[node name="FmodListener3D" type="FmodListener3D" parent="JoueurDemo"]
+
+[node name="FmodEventEmitter3D_reward" type="FmodEventEmitter3D" parent="JoueurDemo"]
+event_name = "event:/ObjectCatch"
+event_guid = "{f3a9f80e-9842-4b9c-935b-6ef38cde2e51}"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+
+[node name="FmodEventEmitter3D_ambiance" type="FmodEventEmitter3D" parent="JoueurDemo"]
+event_name = "event:/Ambiance Level 1"
+event_guid = "{57ca7ceb-50fb-4a88-97d8-9fcf860de541}"
+fmod_parameters/AmbianceChange/id = -1166093049719065838
+fmod_parameters/AmbianceChange = "None"
+fmod_parameters/AmbianceChange/labels = PackedStringArray("None", "State1", "State2", "State3")
+fmod_parameters/AmbianceChange/variant_type = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="JoueurDemo"]
+bank_paths = ["res://Sons & musiques/Fichiers FMOD/FmodBank/Desktop/Master.bank"]
+
 [node name="Object_To_Catch_1" parent="." node_paths=PackedStringArray("Prochain_Objet_A_Activer") instance=ExtResource("42_eoydl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 11)
 activated = true
