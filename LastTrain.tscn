@@ -81,7 +81,7 @@ transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 1.85145, -0.373379, 30.4514)
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 6.48772, 0.633726, 11.1301)
 
 [node name="table_medium2" parent="." instance=ExtResource("4_hwauy")]
-transform = Transform3D(2.25482, 0, 0, 0, 1, 0, 0, 0, 1, 6.02851, -0.35432, 10.3667)
+transform = Transform3D(2.25482, 0, 0, 0, 1, 0, -1.49012e-08, 0, 1, 6.02185, -0.354324, 10.271)
 
 [node name="Wall_Window_Open2" parent="." instance=ExtResource("5_t06td")]
 transform = Transform3D(6.69828, 0, 0.0226873, 0, 2, 0, -0.152005, 0, 0.999743, 16.27, -0.0870361, 30.3698)
