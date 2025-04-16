@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh4hqc6jdaum2"]
+
+[ext_resource type="PackedScene" uid="uid://dfapa1a40wtxg" path="res://Graphismes/LABO/eco-friendly_bamboo_name_badge/scene.gltf" id="1_ou67l"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_ou67l")]

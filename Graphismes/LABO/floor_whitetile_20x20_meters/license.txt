@@ -1,0 +1,11 @@
+Model Information:
+* title:	Floor: WhiteTile 20x20 (meters)
+* source:	https://sketchfab.com/3d-models/floor-whitetile-20x20-meters-b689f03555b14f7a8d064128c2e8c220
+* author:	Pichael Productions (https://sketchfab.com/Pichael3000)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Floor: WhiteTile 20x20 (meters)" (https://sketchfab.com/3d-models/floor-whitetile-20x20-meters-b689f03555b14f7a8d064128c2e8c220) by Pichael Productions (https://sketchfab.com/Pichael3000) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

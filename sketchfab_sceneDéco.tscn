@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu2eedfx8ddck"]
+
+[ext_resource type="PackedScene" uid="uid://dswvtsqp811gm" path="res://Graphismes/LABO/hemical_laboratory/scene.gltf" id="1_pvwkf"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_pvwkf")]
+
+[node name="polySurface653_lambert1_0" parent="Sketchfab_model/dbf241d632dc4c47ae2c3626bdb2e522_fbx/RootNode/polySurface653" index="0"]
+visible = false
+
+[node name="pPlane26_lambert1_0" parent="Sketchfab_model/dbf241d632dc4c47ae2c3626bdb2e522_fbx/RootNode/pPlane26" index="0"]
+visible = false

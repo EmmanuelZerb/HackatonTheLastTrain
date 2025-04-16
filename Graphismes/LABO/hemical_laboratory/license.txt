@@ -1,0 +1,11 @@
+Model Information:
+* title:	Сhemical laboratory
+* source:	https://sketchfab.com/3d-models/hemical-laboratory-afe17ff6e7a346f88cad508a42b5a8ee
+* author:	viklia (https://sketchfab.com/viklia)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Сhemical laboratory" (https://sketchfab.com/3d-models/hemical-laboratory-afe17ff6e7a346f88cad508a42b5a8ee) by viklia (https://sketchfab.com/viklia) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

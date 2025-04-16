@@ -1,0 +1,11 @@
+Model Information:
+* title:	Hypodermic
+* source:	https://sketchfab.com/3d-models/hypodermic-9cd2545c878b445b83b79ed668e4570e
+* author:	CrazyMoralFreak (https://sketchfab.com/crazymoralfreak)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Hypodermic" (https://sketchfab.com/3d-models/hypodermic-9cd2545c878b445b83b79ed668e4570e) by CrazyMoralFreak (https://sketchfab.com/crazymoralfreak) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

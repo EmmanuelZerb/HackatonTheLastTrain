@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f03l3g7utdgy"
+uid="uid://b55oa65npd60k"
 path.s3tc="res://.godot/imported/crates_stacked_dungeon_texture.png-e7d62c27dcee4dfb89516ea1d86c7a3b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

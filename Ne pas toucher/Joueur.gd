@@ -1,94 +1,86 @@
 extends CharacterBody3D
 
-# Based on this tutorial: https://www.youtube.com/watch?v=A3HLeyaBCq4
+# Paramètres du joueur
+@export var speed = 5.0
+@export var jump_strength = 6.0
+@export var sensitivity = 0.002
 
-var speed
-const WALK_SPEED = 5.0
-const SPRINT_SPEED = 8.0
-const JUMP_VELOCITY = 4.5
-const SENSIBILITE = 0.003
+# Paramètres gyroscope
+@export var use_gyroscope = false
+@export var gyro_sensitivity = 0.5
 
-# Head bob variable
-const BOB_FREQ = 2.0
-const BOB_AMPLITUDE = 0.08
-var time_bob = 0.0
+# Références aux nœuds
+@onready var head = $Head
+@onready var camera = $Head/Camera3D
+@onready var serial_connection = $SerialConnection
 
-# FOV variables
-const BASE_FOV = 75.0
-const FOV_CHANGE = 1.5
-const RECUL_COUP = 1.0
-
-
-var gravity = 9.8
-
-@onready var tête = $"Tête"
-@onready var camera = $"Tête/Camera3D"
-@onready var rect_dégât = $"Interface_Joueur/rect_dégât"
-
-func _init():
-	g_vars.joueur = self
+# Variables d'état
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
+	# Capture la souris
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	print("Joueur initialisé")
 
-func _unhandled_input(event):
-	if event is InputEventMouseMotion:
-		tête.rotate_y(-event.relative.x * SENSIBILITE)
-		camera.rotate_x(-event.relative.y * SENSIBILITE)
-		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-70), deg_to_rad(60))
+	# Connecter le signal de SerialConnection si disponible
+	if serial_connection and serial_connection.has_signal("gyro_data_received"):
+		serial_connection.connect("gyro_data_received", Callable(self, "process_gyro_data"))
+
+func _input(event):
+	# Appuyer sur G pour basculer entre souris et gyroscope
+	if event is InputEventKey and event.pressed and event.keycode == KEY_G:
+		use_gyroscope = !use_gyroscope
+		print("Gyroscope: ", "activé" if use_gyroscope else "désactivé")
+
+	# Gestion de l'entrée de la souris pour la caméra (seulement si gyroscope désactivé)
+	if not use_gyroscope and event is InputEventMouseMotion:
+		rotate_y(-event.relative.x * sensitivity)
+		if head:
+			head.rotate_x(-event.relative.y * sensitivity)
+			head.rotation.x = clamp(head.rotation.x, -PI/2, PI/2)
+
+	# Appuyer sur Échap pour libérer le curseur
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+# Cette fonction sera appelée par SerialConnection quand disponible
+func process_gyro_data(x_rotation, y_rotation):
+	if use_gyroscope:
+		rotate_y(-x_rotation * gyro_sensitivity)
+		if head:
+			head.rotate_x(-y_rotation * gyro_sensitivity)
+			head.rotation.x = clamp(head.rotation.x, -PI/2, PI/2)
 
 func _physics_process(delta):
-	# Add the gravity.
+	# Ajout de la gravité
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	# Handle jump.
-	if Input.is_action_just_pressed("Sauter") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-	
-	# Handle sprint.
-	if Input.is_action_pressed("Courir"):
-		speed = SPRINT_SPEED
-	else:
-		speed = WALK_SPEED
+	# Gestion du saut
+	if Input.is_key_pressed(KEY_SPACE) and is_on_floor():
+		velocity.y = jump_strength
 
-	# Get the input direction and handle the movement/deceleration.
-	var input_dir = Input.get_vector("Gauche", "Droite", "Avancer", "Reculer")
-	var direction = (tête.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	# if/else is_on_floor for jump inertia, avoid stopping abruptly in the middle of jump when releasing move keys
-	if is_on_floor():
-		if direction:
-			velocity.x = direction.x * speed
-			velocity.z = direction.z * speed
-		else:
-			velocity.x = 0.0
-			velocity.z = 0.0
-	else: # play with the last value to change inertia
-		velocity.x = lerp(velocity.x, direction.x * speed, delta * 3.0)
-		velocity.z = lerp(velocity.z, direction.z * speed, delta * 3.0)
-	
-	# Head bob feature:
-	time_bob += delta * velocity.length() * float(is_on_floor())
-	camera.transform.origin = _headbob(time_bob)
-	
-	# FOV
-	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
-	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
-	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
+	# Gestion des entrées de mouvement pour clavier AZERTY (ZQSD)
+	var input_dir = Vector2.ZERO
+	if Input.is_key_pressed(KEY_Z) or Input.is_key_pressed(KEY_UP):
+		input_dir.y -= 1
+	if Input.is_key_pressed(KEY_S) or Input.is_key_pressed(KEY_DOWN):
+		input_dir.y += 1
+	if Input.is_key_pressed(KEY_Q) or Input.is_key_pressed(KEY_LEFT):
+		input_dir.x -= 1
+	if Input.is_key_pressed(KEY_D) or Input.is_key_pressed(KEY_RIGHT):
+		input_dir.x += 1
+
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
+	if direction:
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
+	else:
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
 
 	move_and_slide()
-
-func _headbob(time) -> Vector3:
-	var pos = Vector3.ZERO
-	pos.y = sin(time * BOB_FREQ) * BOB_AMPLITUDE
-	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMPLITUDE
-	return pos
-
-func coup(dir):
-	effets_dégâts()
-	velocity += dir * RECUL_COUP
-
-func effets_dégâts():
-	rect_dégât.visible = true
-	await get_tree().create_timer(0.2).timeout
-	rect_dégât.visible = false

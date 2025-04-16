@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://86046wubjycw"]
+
+[ext_resource type="PackedScene" uid="uid://bn5588aehuqph" path="res://Graphismes/LABO/hemical_laboratory.glb" id="1_6liv8"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_6liv8")]
+
+[node name="pPlane23_lambert1_0" parent="Sketchfab_model/dbf241d632dc4c47ae2c3626bdb2e522_fbx/RootNode/pPlane23" index="0"]
+visible = false
+
+[node name="pPlane24_lambert1_0" parent="Sketchfab_model/dbf241d632dc4c47ae2c3626bdb2e522_fbx/RootNode/pPlane24" index="0"]
+visible = false
+
+[node name="polySurface653_lambert1_0" parent="Sketchfab_model/dbf241d632dc4c47ae2c3626bdb2e522_fbx/RootNode/polySurface653" index="0"]
+visible = false
+
+[node name="pPlane26_lambert1_0" parent="Sketchfab_model/dbf241d632dc4c47ae2c3626bdb2e522_fbx/RootNode/pPlane26" index="0"]
+visible = false

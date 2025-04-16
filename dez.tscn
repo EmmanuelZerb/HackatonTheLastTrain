@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsi68ljj6vt5a"]
+
+[ext_resource type="PackedScene" uid="uid://cb85alupqxlb4" path="res://Graphismes/LABO/dead_hazmat_female.glb" id="1_wwjqn"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_wwjqn")]

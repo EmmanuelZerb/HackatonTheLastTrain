@@ -1,0 +1,11 @@
+Model Information:
+* title:	Floor
+* source:	https://sketchfab.com/3d-models/floor-7e5e29de19404f239a4f60d73b396fdd
+* author:	tomaszura (https://sketchfab.com/tomaszura)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Floor" (https://sketchfab.com/3d-models/floor-7e5e29de19404f239a4f60d73b396fdd) by tomaszura (https://sketchfab.com/tomaszura) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

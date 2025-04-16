@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dm6-001-13
+* source:	https://sketchfab.com/3d-models/dm6-001-13-3c200586e8604d8e974915b19f5f0b02
+* author:	foxart3d (https://sketchfab.com/foxart3d)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dm6-001-13" (https://sketchfab.com/3d-models/dm6-001-13-3c200586e8604d8e974915b19f5f0b02) by foxart3d (https://sketchfab.com/foxart3d) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

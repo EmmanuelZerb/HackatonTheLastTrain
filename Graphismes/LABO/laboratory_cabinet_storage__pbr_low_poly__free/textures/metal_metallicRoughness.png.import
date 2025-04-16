@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cx6pbusacdmtw"
+path.s3tc="res://.godot/imported/metal_metallicRoughness.png-c7ac33411351da127c8a6e2f1c42cf1e.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Graphismes/LABO/laboratory_cabinet_storage__pbr_low_poly__free/textures/metal_metallicRoughness.png"
+dest_files=["res://.godot/imported/metal_metallicRoughness.png-c7ac33411351da127c8a6e2f1c42cf1e.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=8
+roughness/src_normal="res://Graphismes/LABO/laboratory_cabinet_storage__pbr_low_poly__free/textures/metal_normal.jpeg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

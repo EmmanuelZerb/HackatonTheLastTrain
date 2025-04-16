@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjwgl0s3mrjup"
+uid="uid://c06odgwsepwv8"
 path.s3tc="res://.godot/imported/scaffold_pillar_wall_dungeon_texture.png-ddd0ba5042d431a93ab5f75d447d6bd4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

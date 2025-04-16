@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wall + Ceiling + Floor Module Laid Out
+* source:	https://sketchfab.com/3d-models/wall-ceiling-floor-module-laid-out-a84c6277418940fbb0c731fd7ed934b7
+* author:	Naked Singularity Studio (https://sketchfab.com/nakedsingularity)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wall + Ceiling + Floor Module Laid Out" (https://sketchfab.com/3d-models/wall-ceiling-floor-module-laid-out-a84c6277418940fbb0c731fd7ed934b7) by Naked Singularity Studio (https://sketchfab.com/nakedsingularity) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
