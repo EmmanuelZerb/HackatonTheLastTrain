@@ -1858,6 +1858,9 @@ transform = Transform3D(-0.0199522, 0, -0.0013826, 0, 0.02, 0, 0.0013826, 0, -0.
 [node name="Sketchfab_Scene21" parent="." instance=ExtResource("24_lww1c")]
 transform = Transform3D(2.43595e-06, 6.97564e-05, -0.00199878, -0.00199878, 6.9799e-05, 3.70694e-13, 6.97566e-05, 0.00199756, 6.97989e-05, 7.28281, 1.00775, 28.8206)
 
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+bank_paths = ["res://FMOD_Bank/Desktop/Master.bank"]
+
 [connection signal="body_entered" from="Livre/3D model/InteractionArea" to="Livre/3D model" method="_on_body_entered"]
 [connection signal="body_exited" from="Livre/3D model/InteractionArea" to="Livre/3D model" method="_on_body_exited"]
 [connection signal="body_entered" from="Livre3/3D model/InteractionArea" to="Livre3/3D model" method="_on_body_entered"]

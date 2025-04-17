@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bkqhg178vmupd"]
 
-[ext_resource type="Script" uid="uid://c8xhi06mjjfe8" path="res://Scènes/Demo_Prof/JoueurDemo.gd" id="1_usy0s"]
+[ext_resource type="Script" uid="uid://c6ciy1fl4jbf8" path="res://Ne pas toucher/Joueur.gd" id="1_usy0s"]
 [ext_resource type="Shader" uid="uid://bqnfrbdwtrsfq" path="res://Personnages/Joueur/camera_effect.gdshader" id="2_kopph"]
 [ext_resource type="Script" uid="uid://cpjvry8nybxgq" path="res://Personnages/Joueur/camera_effect.gd" id="2_xqbdb"]
 [ext_resource type="Script" uid="uid://bxa3dkowjfvt1" path="res://Personnages/Joueur/camera_shake.gd" id="3_eoaqw"]
