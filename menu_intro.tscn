@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://w1gfkvrfr874"]
+[gd_scene load_steps=12 format=3 uid="uid://bcsbffi83bwwq"]
 
 [ext_resource type="PackedScene" uid="uid://u5hrxvuws75a" path="res://background.tscn" id="1_eu4wb"]
-[ext_resource type="Script" uid="uid://cuiixeqkbrqca" path="res://menuEtSon.gd" id="1_pnre8"]
+[ext_resource type="Script" path="res://menuEtSon.gd" id="1_pnre8"]
 
 [sub_resource type="Environment" id="Environment_pnre8"]
 

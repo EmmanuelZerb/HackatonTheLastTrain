@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bkqhg178vmupd"]
 
-[ext_resource type="Script" uid="uid://c6ciy1fl4jbf8" path="res://Ne pas toucher/Joueur.gd" id="1_scwxf"]
+[ext_resource type="Script" uid="uid://c8xhi06mjjfe8" path="res://Scènes/Demo_Prof/JoueurDemo.gd" id="1_usy0s"]
 [ext_resource type="Shader" uid="uid://bqnfrbdwtrsfq" path="res://Personnages/Joueur/camera_effect.gdshader" id="2_kopph"]
 [ext_resource type="Script" uid="uid://cpjvry8nybxgq" path="res://Personnages/Joueur/camera_effect.gd" id="2_xqbdb"]
 [ext_resource type="Script" uid="uid://bxa3dkowjfvt1" path="res://Personnages/Joueur/camera_shake.gd" id="3_eoaqw"]
@@ -18,25 +18,23 @@ shader_parameter/color_shift = 0.002
 shader_parameter/darkness = 0.05
 shader_parameter/static_strength = 0.02
 
-[node name="Root" type="Node3D"]
+[node name="Joueur" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("1_usy0s")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-script = ExtResource("1_scwxf")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_gp5ss")
 
-[node name="Tête" type="Node3D" parent="CharacterBody3D"]
+[node name="Tête" type="Node3D" parent="."]
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Tête"]
+[node name="Camera3D" type="Camera3D" parent="Tête"]
 current = true
 script = ExtResource("2_xqbdb")
 
-[node name="CameraShake" type="Node3D" parent="CharacterBody3D/Tête/Camera3D"]
+[node name="CameraShake" type="Node3D" parent="Tête/Camera3D"]
 script = ExtResource("3_eoaqw")
 
-[node name="Control" type="Control" parent="CharacterBody3D/Tête"]
+[node name="Control" type="Control" parent="Tête"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,7 +43,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_4pdh7")
 
-[node name="SerialConnection" type="Node3D" parent="CharacterBody3D/Tête"]
+[node name="SerialConnection" type="Node3D" parent="Tête"]
 script = ExtResource("5_udu41")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -53,9 +51,11 @@ script = ExtResource("6_usy0s")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_xqbdb")
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 9.0
 offset_bottom = 11.0
 color = Color(1, 1, 1, 0)
+
+[node name="FmodListener3D" type="FmodListener3D" parent="."]
