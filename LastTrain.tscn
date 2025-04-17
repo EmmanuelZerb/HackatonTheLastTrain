@@ -199,7 +199,6 @@ shadow_enabled = true
 [node name="Collider_Container" type="Node3D" parent="."]
 
 [node name="WallCollider1" type="StaticBody3D" parent="Collider_Container"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collider_Container/WallCollider1"]
 transform = Transform3D(1.00001, 0, -1.49012e-07, 0, 1, 0, 1.49012e-07, 0, 1.00001, -4.58033, 3.0303, 11.9999)

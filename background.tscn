@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://u5hrxvuws75a"]
+
+[ext_resource type="PackedScene" uid="uid://dsi4jjupuyil3" path="res://Scenes intro/sci-fi_lab.glb" id="1_oabld"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_oabld")]

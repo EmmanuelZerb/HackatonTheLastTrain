@@ -1,0 +1,176 @@
+[gd_scene load_steps=12 format=3 uid="uid://w1gfkvrfr874"]
+
+[ext_resource type="PackedScene" uid="uid://u5hrxvuws75a" path="res://background.tscn" id="1_eu4wb"]
+[ext_resource type="Script" uid="uid://cuiixeqkbrqca" path="res://menuEtSon.gd" id="1_pnre8"]
+
+[sub_resource type="Environment" id="Environment_pnre8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmvxr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ue8rk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_shifl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pi1md"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jwvrc"]
+
+[sub_resource type="Animation" id="Animation_iujyo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.766605, -0.283206, 5.96046e-08)]
+}
+
+[sub_resource type="Animation" id="Animation_iujk7"]
+resource_name = "cam_anim"
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03, 3.02, 5.99, 8.96667, 12, 15.0667, 18.0333, 21, 24.0667, 27.0333, 30),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.766605, -0.283206, 5.96046e-08), Vector3(1.25577, 0.0960899, 5.96046e-08), Vector3(3.67531, 0.419561, 5.96046e-08), Vector3(6.30814, 0.419561, -0.869137), Vector3(3.61562, 0.419561, -0.869137), Vector3(1.60312, 0.107372, -0.035309), Vector3(0.683839, -0.137898, -0.035309), Vector3(0.0582305, 0.157357, -0.035309), Vector3(0.771676, -0.112295, -0.035309), Vector3(1.81971, -0.769559, -0.035309), Vector3(0.766605, -0.283206, 5.96046e-08)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0c0i7"]
+_data = {
+&"RESET": SubResource("Animation_iujyo"),
+&"cam_anim": SubResource("Animation_iujk7")
+}
+
+[node name="MenuIntro" type="CanvasLayer"]
+script = ExtResource("1_pnre8")
+
+[node name="Background" type="Node3D" parent="."]
+
+[node name="Map" parent="Background" instance=ExtResource("1_eu4wb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0114, -1.11772, -0.272709)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="Background/SubViewportContainer"]
+handle_input_locally = false
+msaa_3d = 3
+use_taa = true
+use_debanding = true
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Background/SubViewportContainer/SubViewport"]
+transform = Transform3D(0.834377, 0, -0.551194, 0, 1, 0, 0.551194, 0, 0.834377, 0.766605, -0.283206, 5.96046e-08)
+fov = 36.6642
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Background"]
+environment = SubResource("Environment_pnre8")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="TitreJeu" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 62
+text = "The Last Train"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="LancerJeu" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_hover_color = Color(0.549387, 1, 0.517732, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.647059, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vmvxr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ue8rk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_shifl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pi1md")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jwvrc")
+text = "Lancer une partie"
+
+[node name="CreditsJeu" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_hover_color = Color(0.549387, 1, 0.517732, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.647059, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vmvxr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ue8rk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_shifl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pi1md")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jwvrc")
+text = "Crédits"
+
+[node name="QuitterJeu" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_hover_color = Color(0.549387, 1, 0.517732, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.647059, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vmvxr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ue8rk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_shifl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pi1md")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jwvrc")
+text = "Quitter le jeu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0c0i7")
+}
+autoplay = "cam_anim"
+speed_scale = 0.2
+
+[node name="FmodListener2D" type="FmodListener2D" parent="."]
+
+[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/MusIntro"
+event_guid = "{779e8821-57e3-43a3-9b6b-4742e06c5df1}"
+fmod_parameters/IntroLoop/id = -3497283525028760963
+fmod_parameters/IntroLoop = "Intro"
+fmod_parameters/IntroLoop/labels = PackedStringArray("Intro", "Vide")
+fmod_parameters/IntroLoop/variant_type = 4
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+bank_paths = ["res://FMOD_Bank/Desktop/Master.bank"]
