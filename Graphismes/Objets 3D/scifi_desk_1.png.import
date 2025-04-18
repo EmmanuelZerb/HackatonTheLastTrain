@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://waidiildv355"
-path.s3tc="res://.godot/imported/main_baseColor.png-b8da3c3ab22b78fdbe1eaac5e748ce51.s3tc.ctex"
+uid="uid://cq43krw6jykhy"
+path.s3tc="res://.godot/imported/scifi_desk_1.png-2d9d74694963f08a04b4561a2d3e3f31.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "a25a263c771753c39ff7525c70d86a63"
+}
 
 [deps]
 
-source_file="res://Graphismes/LABO/a_floor_slab/textures/main_baseColor.png"
-dest_files=["res://.godot/imported/main_baseColor.png-b8da3c3ab22b78fdbe1eaac5e748ce51.s3tc.ctex"]
+source_file="res://Graphismes/Objets 3D/scifi_desk_1.png"
+dest_files=["res://.godot/imported/scifi_desk_1.png-2d9d74694963f08a04b4561a2d3e3f31.s3tc.ctex"]
 
 [params]
 

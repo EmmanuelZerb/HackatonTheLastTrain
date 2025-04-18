@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://waidiildv355"
-path.s3tc="res://.godot/imported/main_baseColor.png-b8da3c3ab22b78fdbe1eaac5e748ce51.s3tc.ctex"
+uid="uid://c8bqulmyriglm"
+path.s3tc="res://.godot/imported/door_2.png-bf7b9ca0b010def781f851e1bb23805d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "37a09c292c364d55b00b886a6dc37600"
+}
 
 [deps]
 
-source_file="res://Graphismes/LABO/a_floor_slab/textures/main_baseColor.png"
-dest_files=["res://.godot/imported/main_baseColor.png-b8da3c3ab22b78fdbe1eaac5e748ce51.s3tc.ctex"]
+source_file="res://Graphismes/Objets 3D/door_2.png"
+dest_files=["res://.godot/imported/door_2.png-bf7b9ca0b010def781f851e1bb23805d.s3tc.ctex"]
 
 [params]
 
@@ -20,12 +23,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://Graphismes/Objets 3D/door_2.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

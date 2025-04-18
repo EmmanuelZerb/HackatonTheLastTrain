@@ -1,0 +1,596 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 320,
+      "max": [
+        5.323449611663818,
+        31.5,
+        1.7116177082061768
+      ],
+      "min": [
+        -5.323449611663818,
+        -31.5,
+        0.288382351398468
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 3840,
+      "componentType": 5126,
+      "count": 320,
+      "max": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "min": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 320,
+      "max": [
+        1.0,
+        0.0,
+        4.6583441871916875e-05,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -4.6797133109066635e-05,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 320,
+      "max": [
+        0.1800575703382492,
+        0.5348069667816162
+      ],
+      "min": [
+        0.01122817862778902,
+        0.4784274697303772
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 840,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 7680,
+      "componentType": 5126,
+      "count": 604,
+      "max": [
+        6.000000953674316,
+        31.5,
+        2.0
+      ],
+      "min": [
+        -6.000000953674316,
+        -31.5,
+        0.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 14928,
+      "componentType": 5126,
+      "count": 604,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 5120,
+      "componentType": 5126,
+      "count": 604,
+      "max": [
+        1.0,
+        1.0,
+        4.297099803807214e-05,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -4.2971001676050946e-05,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2560,
+      "componentType": 5126,
+      "count": 604,
+      "max": [
+        0.999500036239624,
+        0.539379894733429
+      ],
+      "min": [
+        0.0005000000237487257,
+        0.0005000000237487257
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 3360,
+      "componentType": 5125,
+      "count": 1536,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 22176,
+      "componentType": 5126,
+      "count": 1084,
+      "max": [
+        57.50445556640625,
+        1.2096803188323975,
+        0.08950001746416092
+      ],
+      "min": [
+        -0.8102364540100098,
+        -0.15760956704616547,
+        -26.330947875976563
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 35184,
+      "componentType": 5126,
+      "count": 1084,
+      "max": [
+        1.0,
+        0.9983512163162231,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 14784,
+      "componentType": 5126,
+      "count": 1084,
+      "max": [
+        0.999657392501831,
+        0.998308539390564,
+        0.9779865145683289,
+        1.0
+      ],
+      "min": [
+        -0.999657392501831,
+        -0.9995517730712891,
+        -0.9779866933822632,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 7392,
+      "componentType": 5126,
+      "count": 1084,
+      "max": [
+        1.0,
+        0.6213847994804382
+      ],
+      "min": [
+        0.0,
+        -8.760057092151337e-17
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 9504,
+      "componentType": 5125,
+      "count": 5136,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Valger (https://sketchfab.com/Valger)",
+      "license": "CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)",
+      "source": "https://sketchfab.com/3d-models/a-floor-slab-8c61064fd8e64a329157a077d6e9073d",
+      "title": "A floor slab."
+    },
+    "generator": "Sketchfab-16.62.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 30048,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 16064,
+      "byteOffset": 30048,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 48192,
+      "byteOffset": 46112,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32128,
+      "byteOffset": 94304,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 126432,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/holes_baseColor.png"
+    },
+    {
+      "uri": "textures/holes_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/holes_normal.png"
+    },
+    {
+      "uri": "textures/main_baseColor.png"
+    },
+    {
+      "uri": "textures/main_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/main_normal.png"
+    },
+    {
+      "uri": "textures/rings_baseColor.png"
+    },
+    {
+      "uri": "textures/rings_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/rings_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "holes",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "main",
+      "normalTexture": {
+        "index": 5
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "rings",
+      "normalTexture": {
+        "index": 8
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 6
+        },
+        "metallicRoughnessTexture": {
+          "index": 7
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Box001_holes_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Box001_main_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Rectangle001_rings_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        86.656494140625,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.924160700564337e-14,
+        -86.656494140625,
+        0.0,
+        0.0,
+        86.656494140625,
+        1.924160700564337e-14,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.0010000000474974513,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0010000000474974513,
+        0.0,
+        0.0,
+        -0.0010000000474974513,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "711f79dae64542cea1d7c9237b27fb20.fbx"
+    },
+    {
+      "children": [
+        3,
+        6
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "matrix": [
+        2.490847110748291,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.4040000438690186,
+        3.1175063505562285e-16,
+        0.0,
+        2.731184482574463,
+        0.0,
+        9.101692199707031,
+        1.0
+      ],
+      "name": "Box001"
+    },
+    {
+      "mesh": 0,
+      "name": "Box001_holes_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Box001_main_0"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        1.6292068460987963e-07,
+        0.0,
+        0.9999999999999867,
+        0.0,
+        -4.371138822550499e-08,
+        0.999999999999999,
+        7.121489295963928e-15,
+        0.0,
+        -0.9999999999999858,
+        -4.371138822550557e-08,
+        1.6292068460987963e-07,
+        0.0,
+        2.731184959411621,
+        1.403999924659729,
+        9.101692199707031,
+        1.0
+      ],
+      "name": "Rectangle001"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -28.347108840942383,
+        1.5616099834442139,
+        13.12072467803955,
+        1.0
+      ],
+      "name": "Object_7"
+    },
+    {
+      "mesh": 2,
+      "name": "Rectangle001_rings_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    },
+    {
+      "sampler": 0,
+      "source": 6
+    },
+    {
+      "sampler": 0,
+      "source": 7
+    },
+    {
+      "sampler": 0,
+      "source": 8
+    }
+  ]
+}

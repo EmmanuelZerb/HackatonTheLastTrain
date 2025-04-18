@@ -163,14 +163,44 @@ autoplay = "cam_anim"
 speed_scale = 0.2
 
 [node name="FmodListener2D" type="FmodListener2D" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+script = null
 
 [node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 event_name = "event:/MusIntro"
 event_guid = "{779e8821-57e3-43a3-9b6b-4742e06c5df1}"
 fmod_parameters/IntroLoop/id = -3497283525028760963
 fmod_parameters/IntroLoop = "Intro"
 fmod_parameters/IntroLoop/labels = PackedStringArray("Intro", "Vide")
 fmod_parameters/IntroLoop/variant_type = 4
+script = null
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 bank_paths = ["res://FMOD_Bank/Desktop/Master.bank"]
+script = null
