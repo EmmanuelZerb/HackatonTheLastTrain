@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://waidiildv355"
-path.s3tc="res://.godot/imported/main_baseColor.png-b8da3c3ab22b78fdbe1eaac5e748ce51.s3tc.ctex"
+uid="uid://bxkdl5i4txuqv"
+path.s3tc="res://.godot/imported/door_0.png-af1c22affaea6cafb48730daf8cc770b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "9a8af7e74a2a64fd50e4247f1a9128cf"
+}
 
 [deps]
 
-source_file="res://Graphismes/LABO/a_floor_slab/textures/main_baseColor.png"
-dest_files=["res://.godot/imported/main_baseColor.png-b8da3c3ab22b78fdbe1eaac5e748ce51.s3tc.ctex"]
+source_file="res://Graphismes/Objets 3D/door_0.png"
+dest_files=["res://.godot/imported/door_0.png-af1c22affaea6cafb48730daf8cc770b.s3tc.ctex"]
 
 [params]
 

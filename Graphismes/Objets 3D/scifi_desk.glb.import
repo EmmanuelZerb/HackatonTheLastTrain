@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://wh2g7fmaxtbt"
-path="res://.godot/imported/scene.gltf-dd635bca8f28481ea27daa956b129f3f.scn"
+uid="uid://dgh8xiobdtour"
+path="res://.godot/imported/scifi_desk.glb-d75da819ed4eb1041aad32d6e0bdd2dc.scn"
 
 [deps]
 
-source_file="res://Graphismes/LABO/a_floor_slab/scene.gltf"
-dest_files=["res://.godot/imported/scene.gltf-dd635bca8f28481ea27daa956b129f3f.scn"]
+source_file="res://Graphismes/Objets 3D/scifi_desk.glb"
+dest_files=["res://.godot/imported/scifi_desk.glb-d75da819ed4eb1041aad32d6e0bdd2dc.scn"]
 
 [params]
 
