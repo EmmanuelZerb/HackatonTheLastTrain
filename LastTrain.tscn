@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://uchyhqqw14nt"]
+[gd_scene load_steps=38 format=3 uid="uid://uchyhqqw14nt"]
 
 [ext_resource type="PackedScene" uid="uid://48mayyj0apt0" path="res://Graphismes/Objets 3D/Environment Sets/Prototype_Bits/Wall.gltf" id="1_c0all"]
 [ext_resource type="PackedScene" uid="uid://bt6qb82md372v" path="res://Graphismes/LABO/sci-fi_laboratory_op_table (1).glb" id="2_fxld6"]
@@ -25,6 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://di6nenog517xc" path="res://Graphismes/Objets 3D/Environment Sets/Prototype_Bits/Door_A.gltf" id="22_nv457"]
 [ext_resource type="PackedScene" uid="uid://b34mxc6d7oxdp" path="res://Graphismes/LABO/hypodermic/scene.gltf" id="23_re3cg"]
 [ext_resource type="PackedScene" uid="uid://bie6hokl5qqlg" path="res://Graphismes/LABO/key_card/scene.gltf" id="24_lww1c"]
+[ext_resource type="PackedScene" uid="uid://bo5p8n7fwj4wr" path="res://Graphismes/Objets 3D/radio/radio.glb" id="26_e67og"]
+[ext_resource type="Script" uid="uid://r1wj5jsxvwhg" path="res://Graphismes/Objets 3D/radio/sonradio.gd" id="27_y1666"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hsngr"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -1552,6 +1554,7 @@ size = Vector3(1.39803, 13.2489, 43.5317)
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(-0.997569, -0.000925851, 0.0696792, -0.000867638, 0.999999, 0.000865768, -0.0696799, 0.000803212, -0.997569, 251.525, 176.031, 146.095)
+script = ExtResource("27_y1666")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nl1kr")
@@ -1858,7 +1861,18 @@ transform = Transform3D(-0.0199522, 0, -0.0013826, 0, 0.02, 0, 0.0013826, 0, -0.
 [node name="Sketchfab_Scene21" parent="." instance=ExtResource("24_lww1c")]
 transform = Transform3D(2.43595e-06, 6.97564e-05, -0.00199878, -0.00199878, 6.9799e-05, 3.70694e-13, 6.97566e-05, 0.00199756, 6.97989e-05, 7.28281, 1.00775, 28.8206)
 
-[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+[node name="Sketchfab_Scene28" parent="." instance=ExtResource("26_e67og")]
+transform = Transform3D(7, 9.60426e-10, 1.49012e-07, 2.82307e-09, 7, -9.31323e-10, 5.96046e-08, 2.32831e-09, 7, 4.57703, 0.881638, 10.6231)
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="Sketchfab_Scene28"]
+event_name = "event:/Docteur"
+event_guid = "{6f36e1cb-34de-4907-98ae-343f16f8b432}"
+fmod_parameters/Medic/id = -4585530123296094015
+fmod_parameters/Medic = "Medic1"
+fmod_parameters/Medic/labels = PackedStringArray("Medic1", "Medic2", "Medic3", "Vide")
+fmod_parameters/Medic/variant_type = 4
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="Sketchfab_Scene28"]
 bank_paths = ["res://FMOD_Bank/Desktop/Master.bank"]
 
 [connection signal="body_entered" from="Livre/3D model/InteractionArea" to="Livre/3D model" method="_on_body_entered"]
