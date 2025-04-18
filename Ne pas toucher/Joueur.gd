@@ -23,10 +23,14 @@ extends CharacterBody3D
 @export var max_fov = 120.0  # FOV maximum (zoom min)
 @export var max_pitch_angle = 1.5  # Angle maximal de rotation verticale (plus grand pour regarder plus loin)
 
+# Paramètre simple pour le son de pas
+@export var footstep_interval = 0.4  # Temps entre chaque pas (secondes)
+
 # Références aux nœuds
 @onready var head = $Tête
 @onready var camera = $Tête/Camera3D
 @onready var arduino_manager = null
+@onready var fmod_emitter = $FmodEventEmitter3D  # Référence à l'émetteur FMOD existant
 
 # Variables pour la rotation de la caméra
 var total_pitch = 0.0
@@ -52,6 +56,9 @@ var gyro_delta_x = 0.0
 var gyro_delta_y = 0.0
 var gyro_ignore_frames = 5  # Ignorer les premières lectures pour stabiliser
 var gyro_frame_count = 0
+
+# Variable pour le son de pas
+var footstep_timer = 0.0
 
 # Obtenir une référence à l'autoload Arduino_Manager
 func _ready():
@@ -344,6 +351,15 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
+		
+		# SIMPLE GESTION DES PAS: Si on bouge et on est au sol
+		if is_on_floor():
+			footstep_timer += delta
+			if footstep_timer >= footstep_interval:
+				# Jouer le son de pas
+				if fmod_emitter:
+					fmod_emitter.play()
+				footstep_timer = 0.0	
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)

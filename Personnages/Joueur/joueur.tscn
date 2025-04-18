@@ -59,3 +59,11 @@ offset_bottom = 11.0
 color = Color(1, 1, 1, 0)
 
 [node name="FmodListener3D" type="FmodListener3D" parent="."]
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Footsteps"
+event_guid = "{f0755399-9df1-4ea4-9205-58b6640dfe69}"
+fmod_parameters/Footsteps/id = 5569917512940065361
+fmod_parameters/Footsteps = "Pas"
+fmod_parameters/Footsteps/labels = PackedStringArray("Pas", "Vide")
+fmod_parameters/Footsteps/variant_type = 4

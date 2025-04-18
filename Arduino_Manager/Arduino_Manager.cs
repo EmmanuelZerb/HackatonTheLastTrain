@@ -18,7 +18,7 @@ public partial class Arduino_Manager : Node
 	private bool connected = false;
 	private string messageSerie = "";
 	private float debugTimer = 0;
-	private string portName = "/dev/cu.usbmodem111201"; // Port modifié pour votre configuration
+	private string portName = "/dev/cu.usbmodem11201"; // Port modifié pour votre configuration
 	
 	// Méthodes publiques pour accéder aux données depuis GDScript
 	public int GetJoyX() 
