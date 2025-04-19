@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyn3qlu3rex7b"
-path.s3tc="res://.godot/imported/rings_baseColor.png-d0d7cd3996ed1201a540dcf35fa815bf.s3tc.ctex"
+path.s3tc="res://.godot/imported/rings_baseColor.png-e24b66fb598f8068fde633265850172b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Graphismes/LABO/a_floor_slab/textures/rings_baseColor.png"
-dest_files=["res://.godot/imported/rings_baseColor.png-d0d7cd3996ed1201a540dcf35fa815bf.s3tc.ctex"]
+source_file="res://Graphismes/LABO/a_floor_slab./textures/rings_baseColor.png"
+dest_files=["res://.godot/imported/rings_baseColor.png-e24b66fb598f8068fde633265850172b.s3tc.ctex"]
 
 [params]
 

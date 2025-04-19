@@ -19,7 +19,7 @@ func _ready():
 		printerr("Erreur : Le nœud Area3D 'InteractionArea' n'a pas été trouvé.")
 
 func _process(delta):
-	if Input.is_action_just_pressed("play_animation"):
+	if Input.is_action_just_pressed("play_animation") or ArduinoManager.GetButtonPress() == 1:
 		action = action + 1
 	if Input.is_action_just_pressed("play_animation") && isInKeyCollision == true && action == 1:
 		has_key = true
@@ -35,7 +35,7 @@ func _process(delta):
 		print("interact porte")
 		%DoorAnimation.play("open")
 		print("Porte ouverte")
-	if Input.is_action_just_pressed("play_animation") && isInDoorCollision == true && has_key == true && action == 3:
+	if Input.is_action_just_pressed("play_animation") && has_key == true && action == 3:
 		get_tree().change_scene_to_file("res://menu_intro.tscn")
 
 func _on_body_entered(body: Node3D):

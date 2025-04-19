@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8rr27aod0lem"
-path.s3tc="res://.godot/imported/rings_metallicRoughness.png-9734e13bd65495b2d73360ddac95c99b.s3tc.ctex"
+path.s3tc="res://.godot/imported/rings_metallicRoughness.png-f72bd60ccb58c1d33de539f1a732a9d5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Graphismes/LABO/a_floor_slab/textures/rings_metallicRoughness.png"
-dest_files=["res://.godot/imported/rings_metallicRoughness.png-9734e13bd65495b2d73360ddac95c99b.s3tc.ctex"]
+source_file="res://Graphismes/LABO/a_floor_slab./textures/rings_metallicRoughness.png"
+dest_files=["res://.godot/imported/rings_metallicRoughness.png-f72bd60ccb58c1d33de539f1a732a9d5.s3tc.ctex"]
 
 [params]
 

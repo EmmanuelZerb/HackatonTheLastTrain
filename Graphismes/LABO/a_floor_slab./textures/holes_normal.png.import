@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://doj48ejdd8brp"
-path.s3tc="res://.godot/imported/holes_normal.png-eeb9147914db210bf762490df9964ce5.s3tc.ctex"
+path.s3tc="res://.godot/imported/holes_normal.png-16d7b79253b46889c7fc37e466fb92ef.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Graphismes/LABO/a_floor_slab/textures/holes_normal.png"
-dest_files=["res://.godot/imported/holes_normal.png-eeb9147914db210bf762490df9964ce5.s3tc.ctex"]
+source_file="res://Graphismes/LABO/a_floor_slab./textures/holes_normal.png"
+dest_files=["res://.godot/imported/holes_normal.png-16d7b79253b46889c7fc37e466fb92ef.s3tc.ctex"]
 
 [params]
 

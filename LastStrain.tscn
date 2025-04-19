@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://uchyhqqw14nt"]
+[gd_scene load_steps=44 format=3 uid="uid://uchyhqqw14nt"]
 
 [ext_resource type="PackedScene" uid="uid://48mayyj0apt0" path="res://Graphismes/Objets 3D/Environment Sets/Prototype_Bits/Wall.gltf" id="1_c0all"]
 [ext_resource type="PackedScene" uid="uid://bt6qb82md372v" path="res://Graphismes/LABO/sci-fi_laboratory_op_table (1).glb" id="2_fxld6"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cb85alupqxlb4" path="res://Graphismes/LABO/dead_hazmat_female.glb" id="8_hwauy"]
 [ext_resource type="PackedScene" uid="uid://b8syqj8oe73bq" path="res://Graphismes/LABO/floor (1)/scene.gltf" id="9_hwauy"]
 [ext_resource type="PackedScene" uid="uid://dfapa1a40wtxg" path="res://Graphismes/LABO/eco-friendly_bamboo_name_badge/scene.gltf" id="10_susiq"]
-[ext_resource type="PackedScene" uid="uid://wh2g7fmaxtbt" path="res://Graphismes/LABO/a_floor_slab/scene.gltf" id="10_t06td"]
+[ext_resource type="PackedScene" uid="uid://wh2g7fmaxtbt" path="res://Graphismes/LABO/a_floor_slab./scene.gltf" id="10_t06td"]
 [ext_resource type="PackedScene" uid="uid://bkqhg178vmupd" path="res://Personnages/Joueur/joueur.tscn" id="11_ji63n"]
 [ext_resource type="PackedScene" uid="uid://co28805vi5on2" path="res://Graphismes/LABO/floor_whitetile_20x20_meters/scene.gltf" id="12_e45h5"]
 [ext_resource type="PackedScene" uid="uid://c1inbc05gftfo" path="res://Graphismes/LABO/scientist 2/scene.gltf" id="13_ttcuv"]
@@ -1548,13 +1548,13 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e67og"]
-size = Vector3(5.82616, 4.9864, 4.61719)
+size = Vector3(96.9211, 4.9864, 7.98853)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nv457"]
 size = Vector3(1.39803, 13.2489, 33.1664)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n6345"]
-size = Vector3(2.03027, 3.18542, 4.396)
+size = Vector3(2.03027, 3.18542, 46.3678)
 
 [sub_resource type="Animation" id="Animation_tvrlr"]
 length = 0.001
@@ -1591,6 +1591,9 @@ _data = {
 &"RESET": SubResource("Animation_tvrlr"),
 &"open": SubResource("Animation_38vdp")
 }
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8cb0o"]
+size = Vector3(5.13177, 3.1347, 7.16345)
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(-0.997569, -0.000925851, 0.0696792, -0.000867638, 0.999999, 0.000865768, -0.0696799, 0.000803212, -0.997569, 251.525, 176.031, 146.095)
@@ -1767,7 +1770,7 @@ libraries = {
 [node name="InteractionArea" type="Area3D" parent="Livre/3D model"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Livre/3D model/InteractionArea"]
-transform = Transform3D(2.2, 0, -1.72121e-11, 0, 2.2, 0, 1.72121e-11, 0, 2.2, 1.67725, -0.170227, 1.42383)
+transform = Transform3D(2.2, -7.06641e-08, -3.57628e-07, 6.33154e-08, 2.2, -6.75209e-09, 5.96046e-08, 1.60653e-08, 2.2, 101.882, -0.170166, 3.01489)
 shape = SubResource("BoxShape3D_e67og")
 
 [node name="Livre3" type="Node3D" parent="."]
@@ -1876,7 +1879,7 @@ transform = Transform3D(1.00003, 0, -3.05474e-07, 0, 1, 0, 3.05474e-07, 0, 1.000
 shape = SubResource("BoxShape3D_nv457")
 
 [node name="Sketchfab_Scene20" parent="." instance=ExtResource("23_re3cg")]
-transform = Transform3D(-0.0200001, -1.5134e-09, 4.66116e-12, -4.20641e-12, 8.69477e-10, 0.0200001, -1.5134e-09, 0.02, -8.76753e-10, -48.5103, 2.6313, 29.4659)
+transform = Transform3D(-0.0200001, -1.39698e-09, 5.79803e-12, -5.68434e-12, 8.69477e-10, 0.0200001, -1.62981e-09, 0.02, -8.76753e-10, -48.5092, 1.38011, 29.4648)
 
 [node name="Keycard" parent="." instance=ExtResource("24_lww1c")]
 unique_name_in_owner = true
@@ -1903,7 +1906,7 @@ transform = Transform3D(-3.25963e-09, -4.3201e-12, 0.013, 1.81899e-11, 0.042, 2.
 transform = Transform3D(1, 5.82077e-11, -1.86265e-09, 0, 1, -1.09139e-11, -2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Area3D"]
-transform = Transform3D(85.3333, 1.11759e-08, 2.38419e-07, 4.32134e-07, 78.9473, -3.84171e-09, -0.000415802, 3.81842e-08, 83.3334, -17.8193, -122.761, 122.688)
+transform = Transform3D(85.3355, 1.02818e-06, -9.53674e-07, 7.82311e-07, 78.9473, 6.99656e-08, -0.0004673, -2.40281e-07, 83.3336, -17.8188, -122.759, -1626.14)
 shape = SubResource("BoxShape3D_n6345")
 
 [node name="DoorAnimation" type="AnimationPlayer" parent="Door"]
@@ -1913,7 +1916,11 @@ libraries = {
 }
 
 [node name="Sketchfab_Scene21" parent="." instance=ExtResource("28_kivq6")]
-transform = Transform3D(-5, 2.61934e-10, 4.47035e-07, 1.16415e-10, 5, 0, -4.76837e-07, 0, -5, -33.5026, 7.8557, 35.4242)
+transform = Transform3D(-5, 1.19326e-09, 4.47035e-07, 1.74623e-10, 5, 0, -5.06639e-07, 0, -5, -33.5015, 6.63527, 35.4231)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.00002, 9.24774e-09, 0, 1.88884e-08, 1, 0, 3.72529e-08, 1.04774e-09, 1, -44.7433, 2.24393, 27.9028)
+shape = SubResource("BoxShape3D_8cb0o")
 
 [connection signal="body_entered" from="Livre/3D model/InteractionArea" to="Livre/3D model" method="_on_body_entered"]
 [connection signal="body_exited" from="Livre/3D model/InteractionArea" to="Livre/3D model" method="_on_body_exited"]

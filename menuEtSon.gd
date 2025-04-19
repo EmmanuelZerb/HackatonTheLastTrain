@@ -10,7 +10,7 @@ func _ready() -> void:
 # Fonction appelée quand le bouton LancerJeu est pressé
 func _on_LancerJeu_pressed() -> void:
 	# Charger et changer pour la scène du jeu
-	get_tree().change_scene_to_file("res://LastTrain.tscn")
+	get_tree().change_scene_to_file("res://LastStrain.tscn")
 
 # Fonction appelée quand le bouton QuitterJeu est pressé
 func _on_QuitterJeu_pressed() -> void:
